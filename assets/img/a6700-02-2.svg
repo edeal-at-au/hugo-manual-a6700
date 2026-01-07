@@ -25,7 +25,7 @@
 
       .st3 {
         fill: #010101;
-        font-family: ArialMT, Arial;
+        font-family: Mulish, sans-serif;
         font-size: 6px;
       }
 
