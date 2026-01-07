@@ -1,0 +1,19 @@
+{{ with . }}
+<div class="flex flex-col items-center gap-[30px] {{.componentItemClass | default "" }}">
+    <h3 class="mb-6 text-4xl font-bold text-white">{{.title}}</h3>
+    <div class="px-[20px] md:px-[100px] mx-auto text-center flex flex-col lg:flex-row gap-[30px] items-center mb-[20px]">
+        <div class="w-full lg:w-[40%]">
+            {{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" "object-cover rounded-2xl aspect-[285/160]") }}
+        </div>
+        <div class="w-full lg:w-[60%]">
+            <p class="mb-6 text-lg text-left">{{ .summary | markdownify }}</p>
+        </div>
+    </div>
+    {{ with .action }}
+    <div class="px-0 py-8 lg:pb-0 items-center lg:flex justify-end">
+        <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200"
+        href={{.link}}>{{.name}}</a>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

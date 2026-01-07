@@ -1,0 +1,14 @@
+{{ $ctx := . }}
+{{.Content}}
+{{ with .Site.Data.content }}
+
+<!-- CTA Specification -->
+{{ with .productSample}}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#housing-parts")
+        "containerClass" (print .containerClass " lg:mb-0"))))
+    }}
+{{ end }}
+
+{{ end }}

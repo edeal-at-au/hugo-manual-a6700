@@ -1,0 +1,40 @@
+id: maintenance-precautions
+component: components/features/component-how-it-works.html
+columnCount: 2
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Maintenance
+slogan: Twist with Care, Capture with Confidence
+summary: 
+showImagesFirst: false
+# action:
+#   name: Next
+#   link: "#"
+details:
+  - block:
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **Precautions**
+    {{% icon icon-warning %}} *Conduct maintenance* in a dry, well-lit area.
+    {{% icon icon-warning %}} *Use only original Sea Frogs spare* O-Rings and silicone grease. 
+    {{% icon icon-warning %}} *Ensure the O-Ring is flat and not twisted* when reinstalling it into the waterproof case groove.
+"
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} &nbsp;
+    {{% icon icon-warning %}} *Recheck the O-Ring and groove after installation* to ensure no debris is attached.
+    {{% icon icon-warning %}} Replace O-Rings at least once a year or after 50 uses to maintain the product's waterproof performance. 
+"
+  - block:
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **After-Use Maintenance**
+    {{% icon number-circle-one %}} *Rinse the housing thoroughly in fresh water.* While submerged, rotate the housing controls and press each button several times to flush out any salt or debris, ensuring smooth operation for future dives.
+    {{% icon number-circle-two %}} *Use compressed air* to remove any remaining freshwater from all external cavities of the housing, paying special attention to buttons and knobs.
+"
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} &nbsp;
+    {{% icon number-circle-three %}} *Store the housing in a shaded area*, protected from impact and overheating. If the shade is unavailable, cover the housing with a light-colored towel or cloth.
+    {{% icon number-circle-four %}} *Treat the lens port surface like a camera lens.* After use, rinse and gently dry the outside of the lens port to prevent water spots. Use only a soft cleaning cloth to avoid scratches. For cleaning, use a mild soap solution.
+"

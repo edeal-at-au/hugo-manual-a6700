@@ -1,0 +1,60 @@
+id: after-sales
+component: components/features/component-call-to-action.html
+columnCount: 2
+containerClass: ""
+title: After Sales Services
+summary: "Our commitment to you extends beyond the purchase. Here's what you need to know about our after-sales service"
+slogan: We've Got Your Back
+sloganClass: "justify-start"
+action:
+details:
+  - title: Warranty Period
+    summary: "The product comes with a limited warranty period of 12 months from the date of purchase.
+    {{< block >}}
+    **Note:** The warranty does not cover O-rings
+    {{</ block >}}
+    "
+    icon:  icons/icon-circle.svg
+  - title: Warranty Repair Services
+    summary: "During the warranty period, the company will provide free repair services if the product is used according to the \"Operating Instructions\" and hardware failures occur due to product quality issues. 
+    {{< block >}}
+**Please note** Shipping costs to and from our service canter are not covered under the warranty and must be paid by the customer
+    {{</ block >}}
+"
+    icon:  icons/icon-circle.svg
+  - title: Paid Repair Services
+    summary: "The following circumstances during the warranty period will result in paid repair services:
+{{< block \"my-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-one %}}
+Failures or damages caused by incorrect operation or use in environments outside the product's specifications.
+{{</ block >}}
+{{< block \"mb-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-two %}}
+Failures or damages caused by unauthorized disassembly, repair, or modification of the product.
+{{</ block >}}
+{{< block \"mb-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-three %}}
+Failures or damages caused by natural disasters, accidents, or other force majeure events after purchase.
+{{</ block >}}
+{{< block \"mb-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-four %}}
+Damages caused by improper maintenance by the customer.
+{{</ block >}}
+**Please note** The customer is responsible for all shipping costs to and from our service center.
+"
+    icon:  icons/icon-circle.svg
+  - title: Post-Warranty Repair Regulations
+    summary: "
+{{< block \"my-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-one %}}    
+For products requiring repair after the warranty period, the company will charge the cost of replacement parts. Before proceeding with repairs, the customer will be notified of the repair charges.
+{{</ block >}}
+{{< block \"mb-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-two %}}
+No repairs will be undertaken if the company’s technical engineers determine the product is too severely damaged or unrepairable.
+{{</ block >}}
+"
+    icon:  icons/icon-circle.svg
+  - title: Liability Disclaimer
+    summary: "The company is not responsible for any product damage or other property loss caused by improper operation or failure to follow the operating instructions.
+    {{< block >}}
+**Please note** The customer is responsible for all shipping costs to and from our service center.
+    {{</ block >}}
+    "
+    icon:  icons/icon-circle.svg
+      
+weight: 1

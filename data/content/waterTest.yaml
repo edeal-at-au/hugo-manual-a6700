@@ -1,0 +1,39 @@
+id: water-test
+component: components/features/component-image-text.html
+containerClass: ""
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Backet Waterproof Test
+slogan: Test the Limits, Stay Dry
+sloganClass: "justify-end"
+subject: 
+summary: 
+image: img/a6700-04.svg
+imageClass: dark:filter-white
+action:
+  name: Next
+  link: #
+details:
+  - summary: "
+Fully submerge the waterproof case in water for 15-20 minutes. 
+"
+    icon:  icons/number-circle-one.svg
+    iconClass: w-10 h-10 -mt-2
+  - summary: "
+Remove the case and dry it thoroughly with a cloth or compressed air.
+"
+    icon:  icons/number-circle-two.svg
+    iconClass: w-10 h-10 -mt-2
+  - summary: "
+Inspect the leak alarm window for any flashing alarms.
+"
+    icon:  icons/number-circle-three.svg
+    iconClass: w-10 h-10 -mt-2
+  - summary: "
+Open the case and check for any signs of moisture inside.
+"
+    icon:  icons/number-circle-four.svg
+    iconClass: w-10 h-10 -mt-2
+  - summary: "
+*Note:* To avoid accidents and equipment damage, always complete a waterproof test before using it underwater.
+"

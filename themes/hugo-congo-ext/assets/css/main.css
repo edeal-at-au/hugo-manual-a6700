@@ -1,0 +1,671 @@
+/*! Congo v2.5.4 | MIT License | https://github.com/jpanther/congo */
+
+@tailwind base;
+@tailwind components;
+
+body a,
+body button {
+  @apply transition-colors;
+}
+
+/* Scale SVG icons to text size */
+.icon svg {
+  @apply h-[2em] w-[2em];
+}
+
+body>header, 
+/*body>section, */
+footer,
+body>article>section, 
+#page>article>header, #page>article>section, 
+#page>section,
+main>header, 
+/*main>section,*/
+main>article>header, main>article>section {
+  @apply w-full mx-auto max-w-[1320px] px-8 sm:px-14 md:px-24 lg:px-32 overflow-hidden;
+}
+
+body>header, 
+body>section,
+footer,
+main>header,
+main>section {
+  @apply px-8 sm:px-8 md:px-8 lg:px-8;
+}
+
+body>header {
+  position: absolute;
+  z-index: 50;
+}
+main>section {
+  @apply mx-auto max-w-[1320px];
+}
+
+/* Search */
+#search-query::-webkit-search-cancel-button,
+#search-query::-webkit-search-decoration,
+#search-query::-webkit-search-results-button,
+#search-query::-webkit-search-results-decoration {
+  @apply hidden;
+}
+
+/* Hamburger menu */
+body:has(#menu-controller:checked) {
+  @apply h-screen overflow-hidden;
+}
+#menu-button:has(#menu-controller:checked) {
+  @apply invisible;
+}
+#menu-controller:checked ~ #menu-wrapper {
+  @apply visible opacity-100;
+}
+
+/* RTL support */
+.prose blockquote {
+  @apply rtl:border-l-0 rtl:border-r-4 rtl:pr-4;
+}
+.prose ul > li,
+.prose ol > li {
+  @apply rtl:mr-7 rtl:pl-0 rtl:pr-2;
+}
+.prose ol > li:before,
+.prose ul > li:before {
+  @apply rtl:left-auto rtl:right-1;
+}
+.prose thead td:first-child,
+.prose thead th:first-child {
+  @apply rtl:pr-0;
+}
+.prose thead td:last-child,
+.prose thead th:last-child {
+  @apply rtl:pl-0;
+}
+
+/* Adjust first child within prose */
+.prose div.min-w-0.max-w-prose > *:first-child {
+  @apply mt-3;
+}
+
+/* Table of Contents */
+.toc ul,
+.toc li {
+  @apply px-0 leading-snug list-none;
+}
+.toc ul ul {
+  @apply ltr:pl-4 rtl:pr-4;
+}
+.toc a {
+  @apply font-normal text-neutral-700 dark:text-neutral-400;
+}
+.toc ul > li {
+  @apply rtl:mr-0;
+}
+
+/* Code Copy */
+.highlight-wrapper {
+  @apply block;
+}
+.highlight {
+  @apply relative z-0;
+}
+.highlight:hover > .copy-button {
+  @apply visible;
+}
+.copy-button {
+  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
+}
+.copy-button:hover,
+.copy-button:focus,
+.copy-button:active,
+.copy-button:active:hover {
+  @apply bg-primary-100 dark:bg-primary-600;
+}
+.copy-textarea {
+  @apply absolute -z-10 opacity-5;
+}
+
+/* -- Chroma Highlight -- */
+/* Background */
+.chroma {
+  @apply py-3 rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+}
+.chroma pre {
+  @apply p-0 m-0;
+}
+/* LineTable */
+.chroma .lntable {
+  @apply block w-auto m-0 overflow-auto text-base;
+}
+/* LineNumbersTable */
+/* LineNumbers */
+.chroma .lnt,
+.chroma .ln {
+  @apply px-2 mr-2 text-neutral-600 dark:text-neutral-300;
+}
+.chroma .lntd {
+  @apply p-0 align-top;
+}
+.chroma .lntd:last-of-type {
+  @apply w-full;
+}
+/* LineHighlight */
+.chroma .hl {
+  @apply block w-full bg-primary-100 dark:bg-primary-900;
+}
+/* Keyword */
+/* KeywordDeclaration */
+/* KeywordNamespace */
+/* KeywordPseudo */
+/* KeywordReserved */
+/* NameClass */
+/* NameFunctionMagic */
+/* NameNamespace */
+/* NameVariableClass */
+/* Operator */
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .nc,
+.chroma .fm,
+.chroma .nn,
+.chroma .vc,
+.chroma .o {
+  @apply text-primary-600 dark:text-primary-300;
+}
+/* KeywordConstant */
+.chroma .kc {
+  @apply font-semibold text-secondary-400 dark:text-secondary-500;
+}
+/* KeywordType */
+/* NameVariable */
+/* NameVariableInstance */
+/* NameVariableMagic */
+/* LiteralNumber */
+/* LiteralNumberBin */
+/* LiteralNumberFloat */
+/* LiteralNumberHex */
+/* LiteralNumberInteger */
+/* LiteralNumberIntegerLong */
+/* LiteralNumberOct */
+.chroma .kt,
+.chroma .nv,
+.chroma .vi,
+.chroma .vm,
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  @apply text-secondary-400 dark:text-secondary-600;
+}
+/* Name */
+/* NameDecorator */
+/* NameEntity */
+/* NameLabel */
+.chroma .n,
+.chroma .nd,
+.chroma .ni,
+.chroma .nl {
+  @apply text-secondary-900 dark:text-secondary-200;
+}
+/* NameAttribute */
+/* NameBuiltin */
+/* NameBuiltinPseudo */
+/* NameOther */
+/* NameProperty */
+/* NameTag */
+.chroma .na,
+.chroma .nb,
+.chroma .bp,
+.chroma .nx,
+.chroma .py,
+.chroma .nt {
+  @apply text-secondary-800 dark:text-secondary-300;
+}
+/* NameConstant */
+/* NameException */
+/* NameVariableGlobal */
+.chroma .no,
+.chroma .ne,
+.chroma .vg {
+  @apply font-semibold text-secondary-400 dark:text-secondary-500;
+}
+/* NameFunction */
+.chroma .nf {
+  @apply text-secondary-600 dark:text-secondary-500;
+}
+/* Literal */
+/* LiteralDate */
+/* LiteralString */
+/* LiteralStringAffix */
+/* LiteralStringBacktick */
+/* LiteralStringChar */
+/* LiteralStringDelimiter */
+/* LiteralStringDoc */
+/* LiteralStringDouble */
+/* LiteralStringHeredoc */
+/* LiteralStringInterpol */
+/* LiteralStringOther */
+/* LiteralStringSingle */
+/* GenericInserted */
+/* GenericOutput */
+/* GenericPrompt */
+.chroma .l,
+.chroma .ld,
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .s1,
+.chroma .gi,
+.chroma .go,
+.chroma .gp {
+  @apply text-primary-800 dark:text-primary-400;
+}
+/* LiteralStringEscape */
+.chroma .se {
+  @apply font-semibold text-secondary-400 dark:text-secondary-500;
+}
+/* LiteralStringRegex */
+/* LiteralStringSymbol */
+.chroma .sr,
+.chroma .ss {
+  @apply font-semibold text-primary-800 dark:text-primary-400;
+}
+/* OperatorWord */
+.chroma .ow {
+  @apply font-semibold text-primary-400 dark:text-primary-600;
+}
+/* Comment */
+/* CommentMultiline */
+/* CommentSingle */
+/* CommentSpecial */
+/* CommentPreproc */
+/* CommentPreprocFile */
+.chroma .c,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf {
+  @apply italic text-neutral-500 dark:text-neutral-400;
+}
+/* CommentHashbang */
+.chroma .ch {
+  @apply italic font-semibold text-neutral-500 dark:text-neutral-400;
+}
+/* GenericEmph */
+.chroma .ge {
+  @apply italic;
+}
+/* GenericHeading */
+.chroma .gh {
+  @apply font-semibold text-neutral-500;
+}
+/* GenericStrong */
+.chroma .gs {
+  @apply font-semibold;
+}
+/* GenericSubheading */
+/* GenericTraceback */
+.chroma .gu,
+.chroma .gt {
+  @apply text-neutral-500;
+}
+/* GenericUnderline */
+.chroma .gl {
+  @apply underline;
+}
+
+@tailwind utilities;
+
+.full-width {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+ .animate-float {
+    -webkit-animation: float 2s linear infinite alternate;
+    animation: float 2s linear infinite alternate;
+}
+
+.animate-hero-thumb-sm-animation {
+    -webkit-animation: hero-thumb-sm-animation 4s linear infinite alternate;
+    animation: hero-thumb-sm-animation 4s linear infinite alternate;
+}
+
+/* image filters */
+.filter-white,
+:is(.dark .dark\:filter-white),
+.hover\:filter-white:hover,
+.group:hover .group-hover\:filter-white {
+  filter: brightness(0) invert(1);
+}
+
+.filter-black,
+:is(.dark .dark\:filter-black),
+.hover\:filter-black:hover,
+.group:hover .group-hover\:filter-black {
+  filter: brightness(0%);
+}
+
+.filter-green,
+.hover\:filter-green:hover,
+.group:hover .group-hover\:filter-green {
+  filter: invert(32%) sepia(37%) saturate(2042%) hue-rotate(149deg)
+      brightness(88%) contrast(101%);
+}
+
+.filter-gray-500,
+.hover\:filter-gray-500:hover,
+.group:hover .group-hover\:filter-gray-500{
+  filter: invert(47%) sepia(8%) saturate(951%) hue-rotate(183deg)
+    brightness(91%) contrast(97%);
+}
+
+.filter-grayscale,
+.hover\:filter-grayscale:hover,
+:is(.dark .dark\:filter-grayscale),
+:is(.dark:hover .dark-hover\:filter-grayscale),
+.group:hover .group-hover\:filter-grayscale {
+  filter: grayscale(100%) drop-shadow(12px 12px 8px black)
+}
+
+.filter-drop-shadow,
+.hover\:filter-drop-shadow:hover,
+:is(.dark .dark\:filter-drop-shadow),
+:is(.dark:hover .dark-hover\:filter-drop-shadow),
+.group:hover .group-hover\:filter-drop-shadow {
+  filter: drop-shadow(12px 12px 8px black)
+}
+
+.filter-drop-shadow-16,
+.hover\:filter-drop-shadow-16:hover,
+:is(.dark .dark\:filter-drop-shadow-16),
+:is(.dark:hover .dark-hover\:filter-drop-shadow-16),
+.group:hover .group-hover\:filter-drop-shadow-16 {
+  filter: drop-shadow(16px 16px 10px black)
+}
+
+.filter-none,
+.hover\:filter-none:hover,
+:is(.dark .dark\:filter-none),
+:is(.dark:hover .dark-hover\:filter-none),
+.group:hover .group-hover\:filter-none {
+    filter: none;
+}
+.filter-teal-white,
+.hover\:filter-teal-white:hover,
+:is(.dark .dark\:filter-teal-white),
+:is(.dark:hover .dark-hover\:filter-teal-white),
+.group:hover .group-hover\:filter-teal-white {
+    filter: url(#teal-white);
+}
+.filter-teal-lightgreen,
+.hover\:filter-teal-lightgreen:hover,
+:is(.dark .dark\:filter-teal-lightgreen),
+:is(.dark:hover .dark-hover\:filter-teal-lightgreen),
+.group:hover .group-hover\:filter-teal-lightgreen {
+    filter: url(#teal-lightgreen);
+}
+.filter-sepia,
+.hover\:filter-sepia:hover,
+:is(.dark .dark\:filter-sepia),
+:is(.dark:hover .dark-hover\:filter-sepia),
+.group:hover .group-hover\:filter-sepia {
+    filter: url(#sepia);
+}
+.filter-purple-sepia,
+.hover\:filter-purple-sepia:hover,
+:is(.dark .dark\:filter-purple-sepia),
+:is(.dark:hover .dark-hover\:filter-purple-sepia),
+.group:hover .group-hover\:filter-purple-sepia {
+    filter: url(#purple-sepia);
+}
+.filter-cherry-icecream,
+.hover\:filter-cherry-icecream:hover,
+:is(.dark .dark\:filter-cherry-icecream),
+:is(.dark:hover .dark-hover\:filter-cherry-icecream),
+.group:hover .group-hover\:filter-cherry-icecream {
+    filter: url(#cherry-icecream);
+}
+.filter-blackCurrant-and-mint,
+.hover\:filter-blackCurrant-and-mint:hover,
+:is(.dark .dark\:filter-blackCurrant-and-mint),
+:is(.dark:hover .dark-hover\:filter-blackCurrant-and-mint),
+.group:hover .group-hover\:filter-blackCurrant-and-mint {
+    filter: url(#blackCurrant-and-mint);
+}
+.filter-sea,
+.hover\:filter-sea:hover,
+:is(.dark .dark\:filter-sea),
+:is(.dark:hover .dark-hover\:filter-sea),
+.group:hover .group-hover\:filter-sea {
+    filter: url(#sea);
+}
+.filter-warm-sea,
+.hover\:filter-warm-sea:hover,
+:is(.dark .dark\:filter-warm-sea),
+:is(.dark:hover .dark-hover\:filter-warm-sea),
+.group:hover .group-hover\:filter-warm-sea {
+    filter: url(#warm-sea);
+}
+.filter-spring-grass,
+.hover\:filter-spring-grass:hover,
+:is(.dark .dark\:filter-spring-grass),
+:is(.dark:hover .dark-hover\:filter-spring-grass),
+.group:hover .group-hover\:filter-spring-grass {
+    filter: url(#spring-grass);
+}
+.filter-red-sunset-with-purple,
+.hover\:filter-red-sunset-with-purple:hover,
+:is(.dark .dark\:filter-red-sunset-with-purple),
+:is(.dark:hover .dark-hover\:filter-red-sunset-with-purple),
+.group:hover .group-hover\:filter-red-sunset-with-purple {
+    filter: url(#red-sunset-with-purple);
+}
+.filter-red-sunset,
+.hover\:filter-red-sunset:hover,
+:is(.dark .dark\:filter-red-sunset),
+:is(.dark:hover .dark-hover\:filter-red-sunset),
+.group:hover .group-hover\:filter-red-sunset {
+    filter: url(#red-sunset);
+}
+.filter-gold-sunset,
+.hover\:filter-gold-sunset:hover,
+:is(.dark .dark\:filter-gold-sunset),
+:is(.dark:hover .dark-hover\:filter-gold-sunset),
+.group:hover .group-hover\:filter-gold-sunset {
+    filter: url(#gold-sunset);
+}
+.filter-dark-crimson-sepia,
+.hover\:filter-dark-crimson-sepia:hover,
+:is(.dark .dark\:filter-dark-crimson-sepia),
+:is(.dark:hover .dark-hover\:filter-dark-crimson-sepia),
+.group:hover .group-hover\:filter-dark-crimson-sepia {
+    filter: url(#dark-crimson-sepia);
+}
+.filter-dark-blue-sepia,
+.hover\:filter-dark-blue-sepia:hover,
+:is(.dark .dark\:filter-dark-blue-sepia),
+:is(.dark:hover .dark-hover\:filter-dark-blue-sepia),
+.group:hover .group-hover\:filter-dark-blue-sepia {
+    filter: url(#dark-blue-sepia);
+}
+.filter-dark-green-sepia,
+.hover\:filter-dark-green-sepia:hover,
+:is(.dark .dark\:filter-dark-green-sepia),
+:is(.dark:hover .dark-hover\:filter-dark-green-sepia),
+.group:hover .group-hover\:filter-dark-green-sepia {
+    filter: url(#dark-green-sepia);
+}
+.filter-x-rays,
+.hover\:filter-x-rays:hover,
+:is(.dark .dark\:filter-x-rays),
+:is(.dark:hover .dark-hover\:filter-x-rays),
+.group:hover .group-hover\:filter-x-rays {
+    filter: url(#x-rays);
+}
+.filter-warm-x-rays,
+.hover\:filter-warm-x-rays:hover,
+:is(.dark .dark\:filter-warm-x-rays),
+:is(.dark:hover .dark-hover\:filter-warm-x-rays),
+.group:hover .group-hover\:filter-warm-x-rays {
+    filter: url(#warm-x-rays);
+}
+.filter-golden-x-rays,
+.hover\:filter-golden-x-rays:hover,
+:is(.dark .dark\:filter-golden-x-rays),
+:is(.dark:hover .dark-hover\:filter-golden-x-rays),
+.group:hover .group-hover\:filter-golden-x-rays {
+    filter: url(#golden-x-rays);
+}
+.filter-purple-warm,
+.hover\:filter-purple-warm:hover,
+:is(.dark .dark\:filter-purple-warm),
+:is(.dark:hover .dark-hover\:filter-purple-warm),
+.group:hover .group-hover\:filter-purple-warm {
+    filter: url(#purple-warm);
+}
+.filter-green-pink-acid,
+.hover\:filter-green-pink-acid:hover,
+:is(.dark .dark\:filter-green-pink-acid),
+:is(.dark:hover .dark-hover\:filter-green-pink-acid),
+.group:hover .group-hover\:filter-green-pink-acid {
+    filter: url(#green-pink-acid);
+}
+.filter-yellow-blue-acid,
+.hover\:filter-yellow-blue-acid:hover,
+:is(.dark .dark\:filter-yellow-blue-acid),
+:is(.dark:hover .dark-hover\:filter-yellow-blue-acid),
+.group:hover .group-hover\:filter-yellow-blue-acid {
+    filter: url(#yellow-blue-acid);
+}
+.filter-noise,
+.hover\:filter-noise:hover,
+:is(.dark .dark\:filter-noise),
+:is(.dark:hover .dark-hover\:filter-noise),
+.group:hover .group-hover\:filter-noise {
+    filter: url(#noise);
+}
+.filter-squiggly-0,
+.hover\:filter-squiggly-0:hover,
+:is(.dark .dark\:filter-squiggly-0),
+:is(.dark:hover .dark-hover\:filter-squiggly-0),
+.group:hover .group-hover\:filter-squiggly-0 {
+    filter: url(#squiggly-0);
+}
+.filter-squiggly-1,
+.hover\:filter-squiggly-1:hover,
+:is(.dark .dark\:filter-squiggly-1),
+:is(.dark:hover .dark-hover\:filter-squiggly-1),
+.group:hover .group-hover\:filter-squiggly-1 {
+    filter: url(#squiggly-1);
+}
+.filter-squiggly-2,
+.hover\:filter-squiggly-2:hover,
+:is(.dark .dark\:filter-squiggly-2),
+:is(.dark:hover .dark-hover\:filter-squiggly-2),
+.group:hover .group-hover\:filter-squiggly-2 {
+    filter: url(#squiggly-2);
+}
+.filter-squiggly-3,
+.hover\:filter-squiggly-3:hover,
+:is(.dark .dark\:filter-squiggly-3),
+:is(.dark:hover .dark-hover\:filter-squiggly-3),
+.group:hover .group-hover\:filter-squiggly-3 {
+    filter: url(#squiggly-3);
+}
+.filter-squiggly-4,
+.hover\:filter-squiggly-4:hover,
+:is(.dark .dark\:filter-squiggly-4),
+:is(.dark:hover .dark-hover\:filter-squiggly-4),
+.group:hover .group-hover\:filter-squiggly-4 {
+    filter: url(#squiggly-4);
+}
+.filter-posterize,
+.hover\:filter-posterize:hover,
+:is(.dark .dark\:filter-posterize),
+:is(.dark:hover .dark-hover\:filter-posterize),
+.group:hover .group-hover\:filter-posterize {
+    filter: url(#posterize);
+}
+.filter-dancing,
+.hover\:filter-dancing:hover,
+:is(.dark .dark\:filter-dancing),
+:is(.dark:hover .dark-hover\:filter-dancing),
+.group:hover .group-hover\:filter-dancing {
+    filter: url(#dancing);
+}
+.filter-drops,
+.hover\:filter-drops:hover,
+:is(.dark .dark\:filter-drops),
+:is(.dark:hover .dark-hover\:filter-drops),
+.group:hover .group-hover\:filter-drops {
+    filter: url(#drops);
+}
+.filter-grain,
+.hover\:filter-grain:hover,
+:is(.dark .dark\:filter-grain),
+:is(.dark:hover .dark-hover\:filter-grain),
+.group:hover .group-hover\:filter-grain {
+    filter: url(#grain);
+}
+.filter-fluffy,
+.hover\:filter-fluffy:hover,
+:is(.dark .dark\:filter-fluffy),
+:is(.dark:hover .dark-hover\:filter-fluffy),
+.group:hover .group-hover\:filter-fluffy {
+    filter: url(#fluffy);
+}
+
+.md-content h1, .md-content h2, .md-content h3, .md-content h4, .md-content h5 {
+  @apply font-bold xl:text-[64px] xl:leading-[70px] sm:text-[50px] sm:leading-[58px] text-[40px] leading-[48px] lg:mb-[54px]
+}
+
+.md-content h1, .md-content h2 {
+  @apply text-5xl;
+}
+
+.md-content p {
+  @apply text-neutral-500 text-justify py-2 dark:text-neutral-50
+}
+
+.bg-parallax {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.full-screen-parallax-hero-wrap {
+    width: 100%;
+    height: 100%;
+    position: inherit;
+}
+
+.full-screen-parallax-hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: .3;
+  background: #000000;
+}

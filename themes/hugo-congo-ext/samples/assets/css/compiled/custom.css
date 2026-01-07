@@ -1,0 +1,18 @@
+html {
+  font-size: 12pt;
+}
+
+footer {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--color-primary-100), var(--tw-bg-opacity));
+  padding-top: 0px !important;
+}
+
+:is(.dark footer) {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--color-primary-900), var(--tw-bg-opacity));
+}
+
+h1,h2 {
+  text-transform: capitalize;
+}

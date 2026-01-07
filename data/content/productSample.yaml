@@ -1,0 +1,78 @@
+id: specification
+component: components/content-sections/component-split-with-image.html
+containerClass: ""
+#title: Specification
+#summary: "This section provides an overview of the technical specifications for your Underwater Camera Housing. It's your go-to resource for understanding the device's capabilities and limitations, ensuring you use it safely and effectively."
+#slogan: Operate Within Design Parameters
+sloganClass: "justify-start"
+#action:
+  #name: Next
+  #link: "#"
+hideHeaderAction: true
+details:
+  - title: Product model
+    summary: A7SIII/A7RIII
+    icon:  icons/icon-circle.svg
+  - title: Operating temperature
+    summary: 0-40℃ (32-104℉)
+    icon:  icons/icon-circle.svg
+  - title: Water resistance
+    summary: 40 meters / 130 feet
+    icon:  icons/icon-circle.svg
+  - title: Product dimensions, Weight
+    summary: W190 x D133 x H174mm, 1060g
+    icon:  icons/icon-circle.svg
+  - title: Waterproof construction
+    summary: O-ring seal
+    icon:  icons/icon-circle.svg
+  - title: Material
+    summary: Polycarbonate, Optical glass, Stainless steel, Silicone
+    icon:  icons/icon-circle.svg
+  - title: "Support for Extended Features"
+    summary: "  
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Zoom for compatible lenses
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Electronic alarm system
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Vacuum testing
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} 1/4 Handheld Balancer Extension
+{{</ block >}}
+"
+    icon:  icons/icon-circle.svg
+  - title: 
+    summary: "
+-   &nbsp;    
+
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Fiber optic flash
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Lens replacement
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Cold shoe interface expansion
+{{</ block >}}
+"
+  - title: " "
+    summary: "
+-   &nbsp;
+    
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Aperture adjustment
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Lamp arm extension
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Sync cable flash
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Zoom for compatible lenses
+{{</ block >}}
+"
+weight: 1

@@ -1,0 +1,191 @@
+{{ $ctx := . }}
+{{.Content}}
+{{ with .Site.Data.content }}
+{{ $altCss:= " bg-primary-100 dark:bg-primary-900" }}
+{{ $count:= 0}}
+{{ $isEven := false}}
+
+<!-- Hero with Slides Section -->
+{{ partial "components/headers/full-screen.html" (dict "ctx" $ctx "data" .hero) }}
+<!-- Image Text  Section -->
+{{ with .precautions}}
+    {{ $count = add $count 1 }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#specification"))))
+    }}
+{{ end }}
+<!-- CTA Specification -->
+{{ with .specification}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " lg:mb-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#housing-parts")
+        "containerClass" $containerCss)))
+    }}
+{{ end }}
+<!-- CTA Parts -->
+{{ with .parts}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " lg:mb-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#opening-the-case")
+        "sloganClass" "justify-end"
+        "containerClass" $containerCss)))
+    }}
+{{ end }}
+<!-- Image Text Reversed Section -->
+{{ with .openingTheCase}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " -mt-2" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge .  (dict 
+            "reverse" true 
+            "action" (dict "name" "Next" "link" "#lens-port-installations")
+            "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- How It Works Section -->
+{{ with .lensPortInstallation}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " mt-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#preparations")
+        "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- Image Text Reversed Section -->
+{{ with .preparations}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " -mt-2" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge .  (dict 
+            "reverse" false 
+            "action" (dict "name" "Next" "link" "#camera-installation-and-usage")
+            "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- Image Text Reversed Section -->
+{{ with .cameraInstallation}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " -mt-2" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge .  (dict 
+            "reverse" true 
+            "action" (dict "name" "Next" "link" "#water-test")
+            "sloganClass" "justify-start"
+            "containerClass" $containerCss)))
+        }}
+{{ end }}    
+<!-- Image Text Reversed Section -->
+{{ with .waterTest}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " -mt-2" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge .  (dict 
+            "reverse" false 
+            "action" (dict "name" "Next" "link" "#vacuum-pump-test")
+            "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- Image Text Reversed Section -->
+{{ with .vacuumTest}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " -mt-2" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge .  (dict 
+            "reverse" true 
+            "action" (dict "name" "Next" "link" "#maintenance-and-care")
+            "sloganClass" "justify-start"
+            "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- How It Works Section -->
+{{ with .maintenance}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " mt-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#maintenance-precautions")
+        "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- Maintenance Precautions Section -->
+{{ with .maintenancePrecautions}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " mt-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#storing-the-housing")
+        "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- Storing The Housing Section -->
+{{ with .storingTheHousing}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " mt-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#troubleshooting")
+        "containerClass" $containerCss)))
+        }}
+{{ end }}
+<!-- CTA After Sale -->
+{{ with .troubleshooting}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " lg:mb-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#after-sales")
+        "containerClass" $containerCss)))
+    }}
+{{ end }}
+<!-- CTA After Sale -->
+{{ with .afterSales}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " lg:mb-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "containerClass" $containerCss)))
+    }}
+{{ end }}
+
+<!-- Contact Section -->
+{{ with .contacts }}
+    {{ $count = add $count 1 }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+            "containerClass" (print (.containerClass | default "") " mt-0 !pt-2 " $ctx.Site.Params.footer.parallax.class)
+            "componentClass" (print (.componentClass | default "") " !mt-0 -mb-6")))) }}
+{{ end }}
+{{ end }}
+<!-- <hr class="text-primary-500 -mt-[70px] !mt-0"> -->

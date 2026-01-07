@@ -1,0 +1,60 @@
+{{ $ctx := .ctx }}
+{{ $data:= .data }}
+{{ $order := "" }}
+{{ $justify := "justify-end"}}
+{{ with $data }}
+{{ if eq .reverse true}}
+{{ $order = "order-last"}}
+{{ $justify = "" }}
+{{ end }}
+
+{{ range .details }}
+{{ range .block }} {{ $block := . }}
+<div class="flex flex-wrap -mx-4 my-4">
+    <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0 {{$order}} flex items-center">
+        {{ with .image }}
+            {{ partial "utils/image.html" (dict "image" . "name" $block.title "class" (print "rounded-lg w-full object-cover " $block.imageClass)) }}
+        {{ end }}
+        {{ with .video }}
+            {{ $video := . | $ctx.Page.RenderString  }}
+            {{$video | safeHTML}}
+        {{ end }}
+
+    </div>
+    <div class="w-full lg:w-1/2 px-4 lg:px-12">
+        <div>
+                <div class="flex mb-6 gap-[15px] px-4 py-5 sm:py-9">
+                    {{ with .icon }}
+                    <div class="mr-5 text-nuetral-500">
+                        <!-- <i class="w-5 h-5 dark:filter-white" />-->
+                        {{ partial "utils/inline-image.html" (dict "image" . "name" .name "class" "w-5 h-5 dark:filter-white") }}
+                    </div>
+                    {{ end }}
+                    <div class="text-left text-justify">
+                        {{ with .title }}
+                        <h3 class="mb-4 -mt-2 text-2xl font-bold font-heading text-left">{{ . }}</h3>
+                        {{ end }}
+                        {{ with .summary}}
+                        {{ $s := . | $ctx.Page.RenderString  }}
+                        <div class="grid grid-cols-2 gap-4 grid-cols-[min-content_1fr] text-justify text-left">{{$s | safeHTML}}</div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {{ end }}
+    {{ end }}
+{{ with .footer}}
+<div class="ml-12 text-left text-justify">
+    {{ $f := . | $ctx.Page.RenderString  }}
+    {{$f | safeHTML}}
+</div>
+{{ end}}
+{{ with .action }}
+<div class="px-0 py-8 lg:pb-0 items-center lg:flex justify-center">
+    <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-center text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200"
+        href={{.link}}>{{.name}}</a>
+</div>
+{{ end }}
+{{ end }}

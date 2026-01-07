@@ -1,0 +1,38 @@
+/* Plurk scheme */
+:root {
+  /*--color-neutral: 255, 255, 255;*/
+  --color-neutral: 242, 242, 247;
+    /* Slate */
+  --color-neutral-50: 248, 250, 252;
+  --color-neutral-100: 241, 245, 249;
+  --color-neutral-200: 226, 232, 240;
+  --color-neutral-300: 203, 213, 225;
+  --color-neutral-400: 148, 163, 184;
+  --color-neutral-500: 100, 116, 139;
+  --color-neutral-600: 71, 85, 105;
+  --color-neutral-700: 51, 65, 85;
+  --color-neutral-800: 30, 41, 59;
+  --color-neutral-900: 15, 23, 42;
+    /* Future Dusk */
+  --color-primary-50: 216, 218, 231;
+  --color-primary-100: 186, 189, 213;
+  --color-primary-200: 155, 160, 195;
+  --color-primary-300: 125, 131, 176;
+  --color-primary-400: 95, 102, 157;
+  --color-primary-500: 76, 82, 127;
+  --color-primary-600: 58, 62, 96;
+  --color-primary-700: 39, 43, 66;
+  --color-primary-800: 21, 23, 35;
+  --color-primary-900: 3, 3, 5;
+  /* Fuchsia */
+  --color-secondary-50: 253, 244, 255;
+  --color-secondary-100: 250, 232, 255;
+  --color-secondary-200: 245, 208, 254;
+  --color-secondary-300: 240, 171, 252;
+  --color-secondary-400: 232, 121, 249;
+  --color-secondary-500: 217, 70, 239;
+  --color-secondary-600: 192, 38, 211;
+  --color-secondary-700: 162, 28, 175;
+  --color-secondary-800: 134, 25, 143;
+  --color-secondary-900: 112, 26, 117;
+}

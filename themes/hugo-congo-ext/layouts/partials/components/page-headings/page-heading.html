@@ -1,0 +1,10 @@
+{{ $data := .Params }}
+<section class="{{$data.id}}-page-heading-section mt-40 mb-8">
+    <div class="container full-width max-w-[1320px] px-4 pb-32 mx-auto bg-primary-100 dark:bg-primary-900">
+        <div class="-mb-64 max-w-[1320px] mx-auto px-8">
+        <h1 class="py-4 text-5xl font-bold text-neutral-900 dark:text-neutral">
+            {{ .Title | emojify }}
+        </h1>
+        </div>
+    </div>
+</section>

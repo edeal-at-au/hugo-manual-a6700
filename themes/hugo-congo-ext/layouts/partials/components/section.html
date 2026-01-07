@@ -1,0 +1,30 @@
+{{ $data:= . }}
+<section id={{$data.id}} class="{{$data.id}}-section">
+    <div class="container full-width max-w-[1320px] mx-auto py-[70px] {{ .containerClass }}">
+        <div class="max-w-3xl mx-auto text-center">
+            {{ partial "slogan.html" (dict "slogan" .slogan "class" .sloganClass) }}
+            {{ if not .hideHeaderTitle}}
+            <h2 class="mb-12 text-4xl lg:text-5xl text-white font-bold font-heading">{{.title}}</h2>
+            {{ with .summary }} <p class="-mt-4 mb-12 text-lg text-gray-50">{{.}}</p> {{ end }}
+            {{ if not .hideHeaderAction}}
+            {{ with .action }}
+            <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200"
+                href={{.link}}>{{.name}}</a>
+            {{ end }}
+            {{ end }}
+            {{ with .helper }}
+            {{$helper := . }}
+            <div class="flex items-center gap-3 [&>svg]:hover:fill-neutral-900">
+                {{ partial "utils/inline-image.html" (dict "image" "img/icons/icon-button.svg" "name" .name "class" "fill-primary-500") }}
+                <a class="text-base flex items-center font-medium text-[18px] leading-[18px] gap-[5px]"
+                    href="{{.link}}">{{.name}}</a>
+            </div>
+            {{ end }}
+            {{ end}}
+        </div>
+        <div class="component {{$data.id}}-component max-w-[1320px] mx-auto px-8 mt-8 {{ .componentClass}}">
+            {{ with .component }}  {{ partial . $data }} {{ end }}
+        </div>
+        <div></div>
+    </div>
+</section>

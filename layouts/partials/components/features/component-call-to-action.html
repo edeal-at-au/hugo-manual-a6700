@@ -1,0 +1,44 @@
+{{ $ctx:= .ctx }}
+{{ $data:= .data }}
+{{ $justify := "justify-end"}}
+{{ with $data}}
+  <div class="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+      <!-- <i class="lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4"/> -->
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-{{.columnCount | default 3}}">
+      {{ range .details }}
+        <div class="relative pl-8">
+          <dt class="text-base/7 font-semibold text-gray-900">
+            <div class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-600">
+              {{ partial "utils/inline-image.html" (dict "image" .icon "class" "w-4 h-4 mx-auto filter-none dark:filter-white")}}
+            </div>
+            {{ $t:= .title | $ctx.Page.RenderString (dict "display" "block") }}
+            {{ $t | safeHTML}}
+          </dt>
+          <dd class="mt-0 text-base/7 text-gray-600">
+            <!-- <i class="inline" /> -->
+            {{ $s:= .summary | $ctx.Page.RenderString (dict "display" "block") }}
+            {{ $s | safeHTML }}
+            <div class="flex justify-start {{.imageContainerClass}}">
+            {{ range .images }}
+              {{ $image := "" }} {{ $imageClass := "" }}
+              {{ if isset . "image" }} {{ $image = .image }} {{ $imageClass = .imageClass }} 
+              {{ else }} {{ $image = . }} {{ end }}
+              {{ with $image }}
+                {{ partial "utils/image.html" (dict "image" . "class" (print "filter-none dark:filter-white " $imageClass))}}
+              {{ end}}
+            {{ end }}
+          </div>
+          </dd>
+        </div>
+{{ end }}
+      </dl>
+      {{ if .hideHeaderAction }} {{ with .action }}
+      <div class="px-0 py-8 lg:pb-0 items-center lg:flex {{ $justify}}">
+          <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-center text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200" 
+      href={{.link}}>{{.name}}</a>
+      </div>
+      {{ end }} {{ end }}
+  </div>
+  </div>
+{{ end }}

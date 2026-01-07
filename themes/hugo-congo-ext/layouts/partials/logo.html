@@ -1,0 +1,18 @@
+{{ $w := "10rem"}}
+{{ $h := "10rem"}}
+{{- if .Site.Params.header.logo }}
+  {{- $logo := resources.Get .Site.Params.header.logo }}
+  {{- if $logo }}
+
+  <!-- <i class="h-[7rem] w-[7rem] object-left max-h-24 object-center"/><path class="dark:filter-white"></path>-->
+   {{ partial "utils/inline-image.html" (dict "image" .Site.Params.header.logo "class" "mx-auto sm:mx-0 w-full object-scale-down object-center fill-primary-500 max-h-24")}}
+  {{- end }}
+{{- end }}
+{{- if .Site.Params.header.showTitle | default true }}
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="{{ "" | relLangURL }}"
+    >{{ .Site.Title | markdownify | emojify }}</a
+  >
+{{- end }}

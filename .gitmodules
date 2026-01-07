@@ -1,0 +1,8 @@
+[submodule "themes/hugo-congo"]
+	path = themes/hugo-congo
+	url = https://github.com/jpanther/congo.git
+	branch = stable
+[submodule "themes/hugo-congo-ext"]
+	path = themes/hugo-congo-ext
+	url = https://github.com/edeal-at-au/hugo-congo-ext
+	branch = stable

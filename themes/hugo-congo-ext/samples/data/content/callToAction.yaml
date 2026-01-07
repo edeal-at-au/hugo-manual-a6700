@@ -1,0 +1,21 @@
+id: call-to-action-sample
+component: components/features/component-call-to-action.html
+containerClass: ""
+title: Call To Action Sample
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+slogan: Lorem ipsum dolor sit amet.
+sloganClass: "justify-end"
+action:
+  name: Contact Us for More Info
+  link: /contact/
+details:
+  - title: 1. Lorem ipsum dolor
+    summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. 
+    icon:  icons/icon-flower.svg
+  - title: 2. Lorem ipsum dolor
+    summary: An associate will be with you as quickly as possible when we get your call. Within one hour of your call, a technician will come to your location to drain and cleanse your car. 
+    icon:  icons/icon-gem.svg
+  - title: 3. Lorem ipsum dolor
+    summary: We will not impose the unnecessary burden of costly servicing fees in the event that you have accidentally poured the wrong fuel. Additionally, we will not charge you for our service until after we have finished it.
+    icon:  icons/icon-heart.svg
+weight: 1

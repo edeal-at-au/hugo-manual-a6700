@@ -1,0 +1,29 @@
+id: storing-the-housing
+component: components/features/component-how-it-works-2.html
+imageColumnCount: 2
+columnCount: 2
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Storing the Underwater Camera Housing
+slogan: Store Smart, Dive Deep
+summary: Proper storage of your underwater camera housing is crucial for maintaining its functionality and longevity
+action:
+  name: Next
+  link: "#"
+details:
+  - title: Post-Dive Cleaning
+    #image: img/SF-S-A7RIII-1-23.svg
+    imageClass: dark:filter-white
+    summary: "
+After each dive, remove the camera and close the waterproof housing. Soak it in fresh water for 15-30 minutes, operating all buttons and knobs to prevent salt buildup. 
+Use compressed air to remove any remaining freshwater from all external cavities of the housing, paying special attention to buttons and knobs. If compressed air is unavailable, position the housing to allow any remaining water to drain naturally by gravity.
+Thoroughly clean and dry with a soft cloth."
+  - title: Storage Environment
+    #image: img/SF-S-A7RIII-1-24.svg
+    imageClass: dark:filter-white
+    summary: "Store the housing in a dry, well-ventilated area away from direct sunlight."
+  - title: Avoid Extreme Conditions
+    summary: "Do not store in high temperatures, cold, or humid places, and keep away from naphthalene chemicals or insecticides."
+  - title:  Long-Term Storage
+    summary: "If not using the housing for an extended period, remove the main O-Ring, lubricate them and store it separately in a plastic bag."
+

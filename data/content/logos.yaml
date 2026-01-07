@@ -1,0 +1,21 @@
+id: cloud-logos-sample
+containerClass: 
+component: components/logo-clouds/component-logo-clouds-simple.html
+title: Logo Clouds Sample
+slogan: 
+hideHeaderTitle: false
+hideHeaderAction: true
+imageClass: filer-black dark:filter-white
+images:
+  - name: Logo Sample 1
+    image: img/logo-sample-1.svg
+    action: #
+  - name: Logo Sample 2
+    image: img/logo-sample-2.svg
+    action: #
+  - name: Logo Sample 3
+    image: img/logo-sample-3.svg
+    action: #
+  - name: Logo Sample 4
+    image: img/logo-sample-4.svg
+    action: #

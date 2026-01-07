@@ -1,0 +1,14 @@
+{{ $data := . }}
+<div class="mx-auto grid items-center 
+      grid-cols-1 gap-y-8 sm:grid-cols-2 lg:mx-0 xl:grid-cols-4">
+  {{ range .images}}
+  <div>
+    <a href="{{.action}}" alt="{{.name}}" target="_blank" aria-label="{{.name}}">
+      {{ partial "utils/inline-image.html" (dict 
+        "image" .image 
+        "class" (print "col-span-2 max-h-24 w-full object-cover lg:col-span-1 fill-neutral-700 filter-grayscale stroke-neutral-700 hover:filter-drop-shadow-16 " $data.imageClass)
+      )}}
+    </a>
+  </div>
+  {{ end }}
+</div>

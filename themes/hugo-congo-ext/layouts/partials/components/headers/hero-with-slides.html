@@ -1,0 +1,131 @@
+{{ $data:= . }}
+<section class="{{$data.id}}-section wrapper mt-[160px] hero-with-slides">
+    <div class="container !pt-0 px-8 md:px-[36px] xl:px-0 items-center lg:flex">
+        <div class="lg:w-[70%]">
+            {{ partial "slogan.html" (dict "slogan" .slogan) }}
+            <h1
+                class="font-bold text-[32px] leading-[40px] xl:text-[64px] xl:leading-[70px] sm:text-[50px] sm:leading-[58px] lg:mb-[54px]">
+                {{ .title }}</h1>
+            <p class="hidden md:block text-quote lg:text-lead-lg text-gray-500 pr-[40px] lg:pr-[150px] mb-[44px]">{{ .summary | markdownify }}</p>
+            <div class="flex items-center justify-start mb-[50px]">
+                {{ with.action }}
+                {{ $action := . }}
+                <button id="{{$data.id}}-button" type="button" aria-label="{{$action.name}}">
+                    <a class="hidden md:flex items-center inline-block z-10 relative transition-all duration-200 group px-[22px] py-[15px] lg:px-[32px] lg:py-[22px] rounded-md bg-primary-500 text-neutral-50 hover:bg-neutral-900 hover:text-meutral-50 hover:-translate-y-[2px] text-neutral-50 bg-black text-heading-6 tracking-wide mr-[22px]"
+                        href="{{.link}}">
+                        <span
+                            class="block text-inherit w-full h-full rounded-md text-lg font-semibold">{{$action.name}}</span>
+                            {{ partial "utils/inline-image.html" (dict "image" "img/icons/icon-right.svg" "name" .name "class" "ml-[7px] w-[12px] fill-neutral-50 group-hover:filter-black") }}
+                    </a>
+                </button>
+                {{ end }}
+                {{ with .helper }}
+                {{$helper := . }}
+                <div class="flex items-center gap-3 [&>svg]:hover:fill-neutral-900">
+                    {{ partial "utils/inline-image.html" (dict "image" "img/icons/icon-button.svg" "name" .name "class" "fill-primary-500") }}
+                    <a class="text-base flex items-center font-medium text-[18px] leading-[18px] gap-[5px]"
+                        href="{{.link}}">{{.name}}</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ with .images}}
+        <div class="hidden relative lg:block dark:[&>svg>path]:stroke-neutral-50 lg:min-w-[50%]">
+            {{ with .main}}
+            {{ with .image_caption }} <h2 class="font-bold text-[28px] leading-[40px] xl:text-[54px] xl:leading-[58px] sm:text-[50px] sm:leading-[58px] lg:mb-[52px] absolute text-primary-500 pl-[20px]">{{ .| markdownify }}</h2> {{ end }}
+            {{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" .class) }}
+            {{ end }}
+            {{ with .more }}{{ range .}}
+            <!-- <img class="top-[15%] top-1/2 -right-1/4 animate-float fill-neutral-50 fill-primary-500 filter-sea top-0 animate-hero-thumb-sm-animation">-->
+                {{ partial "utils/inline-image.html" (dict "image" .image "name" .title "class" .class) }}
+            {{ end }} {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    {{ with .slides }}
+    <div class="full-width bg-primary-100 z-50 dark:bg-primary-900 mt-[120px] lg:mt-[80px]">
+        <div class="px-8 mx-auto mt-0 max-w-[1320px] flex md:gap-[30px] -translate-y-[80px]">
+            <div class="{{ $data.id }}-slides flex [&>div]:gap-[30px]">
+                {{ range . }}
+                <div class="rounded-2xl p-[20px] xl:p-[30px] border border-neutral-200 bg-neutral-50 group dark:bg-neutral-800">
+                    <a class="flex flex-col justify-between h-full" href="{{.action.link}}">
+                        <div class="flex items-center gap-4 mb-5">
+                            <div
+                                class="rounded-full transition-all duration-200 grid place-items-center min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px] bg-primary-500 group-hover:bg-primary-200">
+                                {{ partial "utils/image.html" (dict "image" .icon "name" .name "class" "rounded-full p-[14px] max-w-[20px] xl:max-w-[60px] filter-white group-hover:filter-warm-sea") }}
+                            </div>
+                            <h2 class="font-bold text-[14px] xl:text-heading-5">{{ .title }}</h2>
+                        </div>
+                        {{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" "object-cover rounded-2xl aspect-[285/160]") }}
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            {{ if $data.showButtons}}
+            <div class="hidden md:flex items-center gap-5">
+                <div
+                    class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] h-[48px] xl:h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 prev">
+                    {{ partial "utils/inline-image.html" (dict "image" "icons/icon-prev.svg" "name" "prev icon button" "class" "fill-neutral-50 hover:fill-primary-500" ) }}
+                </div>
+                <div
+                    class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] h-[48px] xl:h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 next">
+                    {{ partial "utils/inline-image.html" (dict "image" "icons/icon-next.svg" "name" "next icon button" "class" "fill-neutral-50 hover:fill-primary-500" ) }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ if $data.showButtons}}
+        <div class="flex items-center gap-5 md:hidden pt-[30px] mx-auto justify-center -mt-[80px]">
+            <div
+                class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] h-[48px] xl:h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 prev">
+                {{ partial "utils/inline-image.html" (dict "image" "icons/icon-prev.svg" "name" "prev icon button" "class" "fill-neutral-50 hover:fill-primary-500" ) }}
+            </div>
+            <div
+                class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] h-[48px] xl:h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 next">
+                {{ partial "utils/inline-image.html" (dict "image" "icons/icon-next.svg" "name" "next icon button" "class" "fill-neutral-50 hover:fill-primary-500" ) }}
+            </div>
+        </div>
+        {{ end }}
+        {{ if $data.showDots | default true }}
+        <div class="dots !hidden md:!flex md:!-ml-[180px] !py-[30px] {{if not $data.showButtons }} !-mt-[80px] {{ end }} [&>.active]:!bg-primary-500 md:!-mt-[80px]">
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        var slider = new Glider(document.querySelector('.{{$data.id}}-slides'), {
+            //arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: '.{{$data.id}}-section .dots',
+            draggable: true,
+            duration: .5,
+            {{ if $data.showButtons }}
+            arrows: {
+                prev: '.{{$data.id}}-section .prev',
+                next: '.{{$data.id}}-section .next'
+            },
+            {{ end }}
+            responsive: [
+            {
+                    breakpoint: 1280, //xl+
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    },
+                },
+                {
+                    breakpoint: 768, //md+
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    },
+                }
+            ],
+        });
+        slideAutoPaly(slider, '.{{$data.id}}-slides');
+    });
+   
+</script>
+</section>

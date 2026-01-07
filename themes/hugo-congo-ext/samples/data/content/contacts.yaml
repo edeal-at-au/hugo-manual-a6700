@@ -1,0 +1,26 @@
+id: contact-us
+containerClass: 
+component: components/contacts/component-contacts.html
+title: Contacts
+hideHeaderTitle: true
+hideHeaderAction: true
+slogan: 
+summary: 
+imageClass: filer-black dark:filter-white
+
+contacts:
+  - name: Address
+    summary: "Wide Green Rd, 
+    Melbourne, VIC 3000"
+    icon: icons/icon-location.svg
+  - name: Contact Number
+    summary: "[1800 000 000](tel:1800-000-000)"
+    icon: icons/icon-phone.svg
+  - name: Email Address
+    summary: "[dev@edeal.com.au](mailto:dev@edeal.com.au)"
+    icon: icons/email.svg
+  - name: Website
+    summary: "[www.edeal.com.au](https://www.edeal.com.au)"
+    icon: icons/icon-web.svg
+
+

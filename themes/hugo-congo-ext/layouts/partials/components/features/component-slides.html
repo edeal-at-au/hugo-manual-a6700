@@ -1,0 +1,47 @@
+{{ $data:= . }}
+<div class="mt-[35px] mb-[48px] w-full flex flex-row items-center">
+    {{ if $data.showArrows }}
+    <div
+        class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] min-w-[48px] xl:min-w-[64px] min-h-[48px] xl:min-h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 prev">
+        {{ partial "utils/inline-image.html" (dict "image" "icons/icon-prev.svg" "name" "prev icon button" "class" 
+        "fill-neutral-50 hover:fill-primary-500" ) }}
+    </div>
+    {{ end }}
+    <div class="{{$data.id}}-slides w-full">
+        {{ range $data.details }}
+        {{ partial $data.componentItem (merge . (dict "componentItemClass" $data.componentItemClass)) }}
+        {{ end }}
+    </div>
+    {{ if $data.showArrows }}
+    <div
+        class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] min-w-[48px] xl:min-w-[64px] min-h-[48px] xl:min-h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 next">
+        {{ partial "utils/inline-image.html" (dict "image" "icons/icon-next.svg" "name" "next icon button" "class"
+        "fill-neutral-50 hover:fill-primary-500" ) }}
+    </div>
+    {{ end }}
+</div>
+{{ if $data.showDots }}
+<div class="!hidden md:!flex flex-row dots w-full text-center"></div>
+{{ end }}
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        var slider = new Glider(document.querySelector('.{{$data.id}}-slides'), {
+            //arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            {{ if $data.showDots }}
+            dots: '.{{$data.id}}-section .dots',
+            {{ end }}
+            draggable: true,
+            duration: .5,
+            {{ if $data.showArrows }}
+            arrows: {
+                prev: '.{{$data.id}}-section .prev',
+                next: '.{{$data.id}}-section .next'
+            },
+            {{ end }}
+        });
+        slideAutoPaly(slider, '.{{$data.id}}-slides');
+    });
+
+</script>

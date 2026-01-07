@@ -1,0 +1,32 @@
+id: text-image-sample
+component: components/features/component-image-text.html
+containerClass: ""
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Image Text Component Sample
+slogan: Text Image
+sloganClass: "justify-end"
+subject: Image on the left
+summary: Image on the left
+image: img/image-text-sample.svg
+imageClass: dark:filter-white
+action:
+  name: Contact Us for More Info
+  link: /contact/
+details:
+  - title: Lorem ipsum dolor
+    summary: "
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    "
+    icon:  icons/icon-circle.svg
+
+  - title: Lorem ipsum dolor
+    summary: "
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    "
+    icon:  icons/icon-circle.svg
+

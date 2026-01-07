@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+  lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
+    {{- . -}}
+  {{ end }}"
+  dir="{{ if .Site.Params.rtl | default false -}}
+    rtl
+  {{- else -}}
+    ltr
+  {{- end }}"
+  class="scroll-smooth h-full"
+  data-default-appearance="{{ .Site.Params.defaultAppearance | default "light" }}"
+  data-auto-appearance="{{ .Site.Params.autoSwitchAppearance | default "true" }}"
+>
+  {{- partial "head.html" . -}}
+  <body
+    class="h-full font-body w-screen text-lg leading-7 bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral overflow-x-hidden"
+  >
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </body>
+</html>

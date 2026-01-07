@@ -1,0 +1,46 @@
+{{ $data:= . }}
+
+            {{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" (print "object-cover rounded-2xl aspect-[285/160] mx-auto " .imageClass)) }}
+
+            <div class="{{$data.id}}-accordion mx-auto lg:w-[730px] py-10">
+            {{ range .details }}
+            
+            <div class="ac mt-6 border-0 border-b-2 border-gray/20 py-2">
+                <h3 class="ac-header mb-12 text-2xl lg:text-3xl font-bold font-heading">
+                    <button
+                        type="button"
+                        class="ac-trigger relative !flex w-full items-center justify-between gap-2 !py-2.5 after:!hidden"
+                    >
+                        {{ .title }}
+                        <div class="trigger-icon grid h-6 w-6 place-content-center rounded-full border-2 border-gray text-gray transition">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                    fill="currentColor"
+                                />
+                                <path
+                                    d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+                    </button>
+                </h3>
+                <div class="ac-panel lg:w-4/5 text-left p-[10px]">
+                    <p class="ac-text !pb-5 !pt-0 !leading-[18px]">{{.summary | markdownify}}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ with .action }}
+        <div class="px-0 py-8 lg:pb-0 items-center lg:flex justify-center">
+            <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-center text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200" 
+        href={{.link}}>{{.name}}</a>
+        </div>
+        {{ end }}
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        const acc  = new Accordion(document.querySelector('.{{$data.id}}-accordion'));
+        acc.open(0);
+    });
+</script>

@@ -1,0 +1,1 @@
+# hugo-manual-a6700

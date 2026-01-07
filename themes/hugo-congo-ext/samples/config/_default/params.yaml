@@ -1,0 +1,90 @@
+viewMorePostLink: /blog/
+author: eDeal Australia Pty. Ltd.
+authorUrl: https://edeal.com.au
+defaultKeywords:
+ - hugo congo
+ - hugo congo extension
+ - edeal web development
+ 
+mainSections:
+  - blog
+
+alternateName: Hugo Themes
+subject: Hugo Congo Theme Extensions
+description: Hugo Congo Theme Extensions Samples
+
+enable_open_graph: true
+enable_twitter_cards: true
+
+facebook_site: "edeal-au-hugo-congo-ext-samples"
+twitter_site: edeal-au-hugo-congo-ext-samples
+default_sharing_image: img/sample-logo.svg
+
+colorScheme: future-dusk
+defaultAppearance: light
+fonts:
+  - family: Mulish, sans-serif
+    url: https://fonts.googleapis.com/css?family=Mulish:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap
+    enabled: true
+  - family: Chivo, sans-serif
+    url: https://fonts.googleapis.com/css?family=Chivo:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap
+    enabled: false
+  
+enableSearch: false
+header:
+  layout: hybrid
+  showTitle: false
+  # Logo
+  disabled_logo: false
+  logo_text: Hugo Congo Ext Samples
+  logo: img/sample-logo.svg
+# Google Map
+enableGoogleMaps: false
+#googleMapsApiKey: AIzaSyCzXP2IL1tmXg6Ef5X-opy9rd0r816ix7Q
+#latitude: "-37.94926693578894"
+#longitude: "145.07418165767172"
+
+formspree_action: https://formspree.io/f/mjvdqjqp
+contact_form_ajax: true
+enableRecaptchaInContactForm: true
+# Google Recaptcha V2
+googleRecaptchaKey: 6Lc76IAmAAAAADWvhCKwog_CWeZyUIX4cjjWCUpC
+
+about_us: <p></p>
+copyright: Copyright (c) 2023, eDeal Australia Pty. Ltd.; All Rights Reserved.
+date_format: January 2, 2006
+
+dropdown_mouse_over: false
+
+# Contact Info
+company:
+ url: /contact/
+ name: eDeal Australia Pty. Ltd.
+ phone: 1300 000 0000
+ email: dev@edeal.com.au
+ addressHtml: "<div class='address-box'><p class='text-uppercase'>
+          <strong>Wrong Fuel Fix 24/7</strong>
+          </p><p class='contact-ph-em'>
+           <a href='tel:1300-000-000' data-animate-hover='pulse'><i class='fas fa-phone'></i>&nbsp;1300 000 000</a>
+           <br><a href='mailto:dev@edeal.com.au' data-animate-hover='pulse'><i class='fas fa-envelope'></i>&nbsp;dev@edeal.com.au</a>
+        </p></div>"
+ address: 
+  streetAddress: 
+  addressLocality: 
+  addressRegion: 
+  postalCode: 
+  addressCountry: 
+
+# Top Bar
+topbar:
+  enable: true
+  text: "<p class='hidden-xs info'><span class='hidden-sm'>Contact us on</span> <a class='phone' href='tel:1300-000-000'>1300 000 000</a> or
+    <a class='email' href='mailto:dev@edeal.com.au'>dev@edeal.com.au</a>
+    </p>"
+widgets:
+  categories: true
+  tags: true
+  search: true
+
+footer:
+ showScrollToTop: false

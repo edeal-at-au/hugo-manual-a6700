@@ -1,0 +1,60 @@
+{{.Content}}
+{{ with .Site.Data.content }}
+{{ $altCss:= " bg-primary-100 dark:bg-primary-900" }}
+
+<!-- Hero with Slides Section -->
+{{ partial "components/headers/hero-with-slides.html" .hero}}
+<!-- Image Text  Section -->
+{{ partial "components/section.html" .imageText}}
+<!-- Call To Action Section -->
+{{ with .callToAction}}
+    {{ partial "components/section.html" 
+        (merge . (dict 
+        "containerClass" (print .containerClass " lg:mb-0" $altCss)))
+    }}
+{{ end }}
+<!-- Image Text Reversed Section -->
+{{ with .imageText}}
+    {{ partial "components/section.html" 
+        (merge .  (dict 
+            "reverse" true 
+            "summary" "Image on the right." 
+            "containerClass" (print .containerClass " -mt-2")))
+    }}
+{{ end }}
+<!-- How It Works Section -->
+{{ with .howItWorks}}
+{{ partial "components/section.html" 
+    (merge . (dict 
+        "containerClass" (print .containerClass $altCss " mt-0")))
+    }}
+{{ end }}
+<!-- Slides Section -->
+{{ with .slides }}
+    {{ partial "components/section.html" 
+        (merge . (dict 
+        "componentClass" (print (.componentClass | default "") " !mt-0"))) }}
+{{ end }}
+<!-- Clouds Logos Section -->
+{{ with .logos}}
+    {{ partial "components/section.html" 
+        (merge . (dict 
+            "containerClass" (print (.containerClass | default "") " mt-0" $altCss) 
+            "componentClass" (print (.componentClass | default "") " !mt-0"))) }}
+{{ end }}
+<!-- FAQ Section -->
+{{ with .faq }}
+    {{ partial "components/section.html" 
+        (merge . (dict 
+            "containerClass" (print (.containerClass | default "") " mt-0") 
+            "componentClass" (print (.componentClass | default "") " !mt-0"))) }}
+{{ end }}
+<!-- Contact Section -->
+{{ with .contacts }}
+    {{ partial "components/section.html" 
+        (merge . (dict 
+            "containerClass" (print (.containerClass | default "") " mt-0 !pt-2"  $altCss) 
+            "componentClass" (print (.componentClass | default "") " !mt-0 -mb-6"))) }}
+{{ end }}
+{{ end }}
+<!-- <hr class="text-primary-500 -mt-[70px] !mt-0"> -->

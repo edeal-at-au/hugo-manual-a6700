@@ -1,0 +1,125 @@
+id: specification
+component: components/features/component-call-to-action.html
+containerClass: ""
+title: Specification
+summary: "This section provides an overview of the technical specifications for your Underwater Camera Housing. It's your go-to resource for understanding the device's capabilities and limitations, ensuring you use it safely and effectively.
+"
+slogan: Operate Within Design Parameters
+sloganClass: "justify-start"
+action:
+  name: Next
+  link: "#"
+hideHeaderAction: true
+details:
+  # - title: Product model
+  #   summary: A7SIII/A7RIII
+  #   icon:  icons/icon-circle.svg
+  - title: Operating temperature
+    summary: 0-40℃ (32-104℉)
+    icon:  icons/icon-circle.svg
+  - title: Water resistance
+    summary: 40 meters / 130 feet
+    icon:  icons/icon-circle.svg
+  - title: Buoyancy
+    summary: Extremely positive (Hand strap required)
+    icon:  icons/icon-circle.svg
+  - title: Housing bayonet mount type
+    summary: 90mm
+    icon:  icons/icon-circle.svg
+  - title: Product dimensions, Weight (Body Only)
+    summary: "
+- W195 x D125 x H150mm, 1090g
+
+- W7.68'' x D4.92'' x H5.91'', 2.4lbs
+"
+    icon:  icons/icon-circle.svg
+  - title: Waterproof construction
+    summary: O-ring seal
+    icon:  icons/icon-circle.svg
+  - title:
+  - title: Material
+    summary: Polycarbonate, Stainless steel, Silicone
+    icon:  icons/icon-circle.svg
+  - title:
+# KEY FEATURES
+  - title: "*Key Features*"
+    summary: "
+-   &nbsp;
+    
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Detachable shutter grip with two-stage trigger (sold separately)
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Vacuum Check System port
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Inbuilt leak detection sensor
+{{</ block >}}
+"
+  - title: ---
+    #icon:  icons/icon-circle.svg
+    summary: "
+-   &nbsp;    
+
+-   &nbsp;    
+
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Interchangeable port system 
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Universal M33 accessories port
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Dual Fiber-Optic port (Sea &amp; Sea type) 
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Two stainless steel mounting plates 1/4'' thread 
+{{</ block >}}
+"
+  - title: "---"
+    summary: "
+-   &nbsp;
+    
+-   &nbsp;    
+
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} The reinforced metallic bottom plate 
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Dual-sided metal latch locking system 
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Detachable Pistol grip with 2-stage trigger (optional) 
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} O-rings sealed buttons with spring 
+{{</ block >}}
+"
+# PACKAGE INCLUDES
+  - title: "*“Body only” Package Includes*"
+    summary: "
+-   &nbsp;    
+
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Underwater housing for Sony A6700 (Body only)
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Spare O-rings set
+{{</ block >}}
+    "
+  - title: ---
+    #icon:  icons/icon-circle.svg
+    summary: "  
+-   &nbsp;    
+
+-   &nbsp;    
+
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Silicone grease 5ml
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon check-circle %}} Housing body cap
+{{</ block >}}    
+"
+
+weight: 1

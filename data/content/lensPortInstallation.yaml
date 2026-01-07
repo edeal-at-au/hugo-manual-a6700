@@ -1,0 +1,28 @@
+id: lens-port-installations
+component: components/features/component-how-it-works.html
+columnCount: 2
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Lens Port Installation and Removal
+slogan: Twist with Care, Capture with Confidence
+summary: Step-by-step guide to correctly installing and removing lens port. Proper technique is crucial to prevent damage to your equipment and ensure optimal performance.
+image: img/a6700-03.svg
+imageClass: dark:filter-white lg:w-1/2
+action:
+  name: Next
+  link: "#"
+details:
+  - block:
+    - title: Lens Port Installation
+      summary: "
+{{% icon number-circle-one %}} Remove the dust caps from the housing body and the lens port.
+{{% icon number-circle-two %}} Check the groove on the housing body and lens port O-ring to ensure there is no damage or debris. Remove the O-ring (avoid stretching it!!!), apply a small amount of silicone grease, and then reinstall it into the groove.
+{{% icon number-circle-three %}} Align the lens port's positioning point with the housing body's corresponding point. Push the lens port firmly, then rotate it clockwise until fully secured. If needed, use a screwdriver to install the safety lock pin inside the housing, ensuring you use the correct screwdriver to avoid damaging the screw.
+{{% icon number-circle-four %}} Remember to use a tiny amount when applying grease to your O-rings. A thin, even layer is sufficient for the O-rings to shine without any visible grease patches. Over-lubricating can attract debris and potentially interfere with the sealing function of the O-rings.
+"
+    - title: Lens Port Removal
+      summary: "
+{{% icon number-circle-one %}} If the safety lock pin is installed, use a screwdriver to remove it from the housing. Ensure you use the appropriate tool to avoid damaging the screw.
+{{% icon number-circle-two %}} Press the lens port release button and twist the lens port counterclockwise to detach it.
+"
+

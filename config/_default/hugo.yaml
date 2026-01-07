@@ -1,0 +1,51 @@
+baseurl: https://a6700-manual.saltedline.com
+title: Seafrogs Salted Line Underwater Camera Housing for Sony A6700 Manual
+
+theme: 
+ - hugo-congo-ext
+ - hugo-congo 
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+#security:
+#  exec:   
+#    allow: ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^pandoc$']
+
+galleryLoadJQuery: false
+
+languageCode: en-au
+defaultContentLanguage: en
+
+#disqusShortname: devcows
+googleAnalytics: ""
+summaryLength: 70
+paginate: 10
+
+pluralizelisttitles: false
+permalinks:
+  blog: /blog/:year/:month/:day/:filename/
+taxonomies:
+  category: categories
+  tag: tags
+  author: authors
+
+# assetDir: assets
+# module:
+#   mounts:
+#   - source: content
+#     target: content
+#   - source: static
+#     target: static
+#   - source: layouts
+#     target: layouts
+#   - source: data
+#     target: data
+#   - source: assets
+#     target: assets
+#   - source: i18n  
+#     target: i18n
+#   - source: archetypes
+#     target: archetypes

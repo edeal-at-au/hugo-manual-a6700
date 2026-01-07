@@ -1,0 +1,17 @@
+{{ $data:= . }}
+<div
+  class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+  {{ range .contacts }}
+  <div>
+    <div class="rounded-full transition-all duration-200 grid place-items-center min-w-[60px] min-h-[60px] mb-[30px]">
+      {{ with .icon }}
+      {{ partial "utils/inline-image.html" (dict "image" . "class" (print "w-full h-[48px] fill-neutral-50" $data.imageClass )) }}
+      {{ end }}
+    </div>
+    <h3 class="border-l border-indigo-600 pl-6 font-semibold text-2xl">{{.name}} </h3>
+    <address class="border-l pl-6 pt-2 not-italic min-h-[40%]">
+      <p class="text-xl">{{ .summary | markdownify }}</p>
+    </address>
+  </div>
+  {{ end }}
+</div>

@@ -1,0 +1,27 @@
+id: vacuum-pump-test
+component: components/features/component-image-text.html
+containerClass: ""
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Vacuum Pump System Testing
+slogan: Test the Vacuum, Ensure the Seal
+sloganClass: "justify-end"
+subject: 
+summary: 
+image: img/a6700-05.svg
+imageClass: dark:filter-white
+action:
+  name: Next
+  link: #
+details:
+  - icon:  icons/circle.svg
+    iconClass: w-10 h-10 -mt-2
+    summary: "
+If you purchase the Sea Frogs VPS-100 Pre-Dive vacuum test system (sold separately), you can do an instant waterproof test. The vacuum test system manual includes complete instructions.
+"
+  - summary: "
+*Note:* To avoid accidents and equipment damage, always complete a waterproof test before using the camera housing underwater.
+"
+  - summary: "
+**WARNING:** THIS ACCESSORY IS NOT MEANT TO BE USED UNDERWATER AS PER MANUFACTURER INSTRUCTIONS! ANY ATTEMPT TO DO SO CAN CAUSE EQUIPMENT LOSS AND IS NOT COVERED BY THE WARRANTY!
+"

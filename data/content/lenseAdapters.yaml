@@ -1,0 +1,63 @@
+id: lens-adapters
+component: components/features/component-call-to-action.html
+columnCount: 2
+containerClass: ""
+title: Lens Adapters
+summary: "Note: Lens barrel sold separately
+
+"
+slogan: Adapt Safely, Shoot Securely
+sloganClass: "justify-end"
+action:
+  name: Next
+  link: "#"
+hideHeaderAction: true  
+details:
+  - title: FL90
+    summary: "**For Lenses:** FE 90 F2.8G OSS"
+    icon:  icons/icon-circle.svg
+    images: 
+      - image: "img/SF-S-A7RIII-1-03.svg"
+        imageClass: "max-w-[50%]"
+  - title: FL2870
+    summary: "**For Lenses:** FE 28-70 F3.5-5.6 OSS"
+    icon:  icons/icon-circle.svg
+    images: 
+      - image: "img/SF-S-A7RIII-1-04.svg"
+        imageClass: "max-w-[50%]"
+  - title: WA005-F, WA006-D
+    summary: "
+- **For Lenses:** FE 24-70 F4 ZA OSS
+
+- TAMRON 17-28 F2.8 Di lll RXD
+
+- SIGMA 14-24mm F2.8 DG DN Art
+
+- FE 16-35 F4 (SEL1635Z)
+
+- FE 16-35 F2.8 GM (SEL1635GM)
+
+- FE 12-24 F4 G"
+    icon:  icons/icon-circle.svg
+    images: 
+      - image: "img/SF-S-A7RIII-1-06.svg"
+        imageClass: "max-w-[50%]"
+      - image: "img/SF-S-A7RIII-1-08.svg"
+        imageClass: "max-w-[50%]"
+  - title: WA005-A, WA006-A
+    summary: "
+- **For Lenses:** SIGMA 24-70 F2.8 DG DN Ø82
+
+- FE 24-70 F2.8 GM (SEL2470)
+
+- SONY-FE 4/24-105 G OSS
+
+- FE 2.8/24-70GM II"
+    icon:  icons/icon-circle.svg
+    images: 
+      - image: "img/SF-S-A7RIII-1-05.svg"
+        imageClass: "max-w-[50%]"
+      - image: "img/SF-S-A7RIII-1-07.svg"
+        imageClass: "max-w-[50%]"
+      
+weight: 1

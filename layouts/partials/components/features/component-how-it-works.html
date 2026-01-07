@@ -1,0 +1,48 @@
+{{ $ctx := .ctx}}
+{{ $data:= .data }}
+{{ with $data }}
+{{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" (print "object-cover mx-auto w-full" .imageClass)) }}
+<!-- <i class="lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4"/> -->
+{{ range .details }}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{{$data.columnCount | default 3}}">
+    {{ range .block }}
+    <div class="flex mb-6 gap-[15px] px-4 py-5 sm:py-9">
+        {{ with .image }}
+        <article class="flex flex-col items-start justify-start">
+            <div class="relative w-full">
+              {{ partial "utils/image.html" (dict "image" . "class" "w-full object-cover")}}
+            </div>
+          </article>
+        {{ end }}
+        {{ with .icon }}
+        <div class="mr-5 text-nuetral-500">
+            <!-- <i class="w-5 h-5 dark:filter-white" />-->
+            {{ partial "utils/inline-image.html" (dict "image" . "name" .name "class" "w-5 h-5 dark:filter-white") }}
+        </div>
+        {{ end }}
+        <div class="text-left text-justify">
+            {{ with .title }}
+            <h3 class="mb-4 -mt-2 text-2xl font-bold font-heading text-left">{{ . }}</h3>
+            {{ end }}
+            {{ with .summary}}
+            {{ $s := . | $ctx.Page.RenderString  }}
+            <div class="grid grid-cols-2 gap-4 grid-cols-[min-content_1fr] text-justify text-left">{{$s | safeHTML}}</div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+{{ with .footer}}
+<div class="ml-12 text-left text-justify">
+    {{ $f := . | $ctx.Page.RenderString  }}
+    {{$f | safeHTML}}
+</div>
+{{ end}}
+{{ with .action }}
+<div class="px-0 py-8 lg:pb-0 items-center lg:flex justify-center">
+    <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-center text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200"
+        href={{.link}}>{{.name}}</a>
+</div>
+{{ end }}
+{{ end }}

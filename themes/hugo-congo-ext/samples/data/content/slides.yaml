@@ -1,0 +1,67 @@
+id: slides-sample
+containerClass: 
+component: components/features/component-slides.html
+componentClass:
+componentItem: components/features/component-slides-slide.html
+componentItemClass: 
+
+hideHeaderTitle: false
+hideHeaderAction: true
+
+title: Slide Section Sample
+slogan: Slide Section
+subject: Slide Section Sample
+
+showDots: true
+showArrows: true
+#image: img/slide-sample-hero.jpg
+#imageClass: dark:filter-white
+#action:
+#  name: More Info
+#  link: /contact/
+details:
+  - title: Slide 1
+    summary: "
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    "
+    icon:  icons/icon-tick-open.svg
+    image: img/slide-sample-1.svg
+    action:
+      name: Lorem ipsum
+      link: /contact/
+  - title: Slide 2
+    summary: "
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    "
+    icon:  icons/icon-tick-open.svg
+    image: img/slide-sample-2.svg
+    action:
+      name: Lorem ipsum
+      link: /contact/
+  - title: Slide 3
+    summary: "
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    "
+    icon:  icons/icon-tick-open.svg
+    image: img/slide-sample-3.svg
+    action:
+      name: Lorem ipsum
+      link: /contact/
+  - title: Slide 4
+    summary: "
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+
+    - ***Lorem ipsum dolor sit amet***: consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    "
+    icon:  icons/icon-tick-open.svg
+    image: img/slide-sample-4.svg
+    action:
+      name: Lorem ipsum
+      link: /contact/
+

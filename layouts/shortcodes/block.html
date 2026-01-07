@@ -1,0 +1,2 @@
+{{ $s:= .Inner | .Page.RenderString }}
+<div {{ if len .Params | ne 0 }} class="{{ .Get 0 }}" {{ end }} {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>{{ $s | safeHTML }}</div>

@@ -1,0 +1,10 @@
+{{ $data:= . }}
+{{ with resources.GetMatch .image }}
+    {{ if eq .MediaType.SubType "svg" }}
+        <img class="{{ $data.class }}" src="{{ .RelPermalink }}" width="100%" height="100%" alt="{{$data.title}}" loading="lazy">
+    {{ else }}
+        {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+        <img class="{{ $data.class }}" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{$data.title}}" loading="lazy">
+        {{ end }}
+    {{ end }}
+{{ end }}

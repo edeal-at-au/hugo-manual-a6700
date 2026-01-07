@@ -1,0 +1,88 @@
+viewMorePostLink: /blog/
+author: eDeal Australia Pty. Ltd.
+authorUrl: https://www.edeal.com.au
+defaultKeywords:
+ - salted line camer housing
+ - underwater housing
+ - seafrogs camera waterproof
+ 
+mainSections:
+  - blog
+
+alternateName: Salted Line Manuals
+subject: Salted Line Manuals
+description: Salted Line Manuals
+
+enable_open_graph: true
+enable_twitter_cards: true
+
+facebook_site: 
+twitter_site: 
+default_sharing_image: img/sample-logo.svg
+
+colorScheme: ocean
+defaultAppearance: light
+fonts:
+  - family: Mulish, sans-serif
+    url: https://fonts.googleapis.com/css?family=Mulish:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap
+    enabled: true
+  - family: Chivo, sans-serif
+    url: https://fonts.googleapis.com/css?family=Chivo:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap
+    enabled: false
+  
+enableSearch: false
+header:
+  layout: hybrid
+  showTitle: false
+  # Logo
+  disabled_logo: false
+  logo_text: Salted Line Manuals
+  logo: img/sample-logo.svg
+# Google Map
+enableGoogleMaps: false
+
+formspree_action: 
+contact_form_ajax: true
+enableRecaptchaInContactForm: true
+# Google Recaptcha V2
+googleRecaptchaKey: 
+
+about_us: <p></p>
+copyright: Copyright &copy; 2024. Digital Video Limited. All Rights Reserved.
+date_format: January 2, 2006
+
+dropdown_mouse_over: false
+
+# Contact Info
+company:
+ url: /contact/
+ name: Salted Line
+ phone: 1300 000 0000
+ email: suppot@saltedline.com
+ addressHtml: "<div class='address-box'><p class='text-uppercase'>
+          <strong>Salted Line Camera Housing</strong>
+          </p><p class='contact-ph-em'>
+           <br><a href='mailto:support@saltedline.com' data-animate-hover='pulse'><i class='fas fa-envelope'></i>&nbsp;support@saltedline.com</a>
+        </p></div>"
+ address: 
+  streetAddress: 
+  addressLocality: 
+  addressRegion: 
+  postalCode: 
+  addressCountry: 
+
+# Top Bar
+topbar:
+  enable: true
+  text: "<p class='hidden-xs info'><span class='hidden-sm'>Contact us on</span> or
+    <a class='email' href='mailto:support@saltedline.com'>support@saltedline.com</a>
+    </p>"
+widgets:
+  categories: true
+  tags: true
+  search: true
+
+footer:
+ showScrollToTop: false
+ parallax:
+  class: bg-primary-900 dark:bg-primary-100 text-primary-100 dark:text-primary-900

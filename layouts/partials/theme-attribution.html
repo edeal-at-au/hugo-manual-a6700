@@ -1,0 +1,8 @@
+<p class="text-xs">
+    {{ 
+        $copyright := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" 
+            href="https://edeal.com.au/" target="_blank" rel="noopener noreferrer">eDeal Australia Pty. Ltd.</a>`
+    }}
+    {{ $congo := "" }} 
+    {{ replaceRE `\s+&amp;\s*$` "" (i18n "footer.powered_by" (dict "Hugo" $copyright "Congo" $congo)) | safeHTML  }}
+  </p>

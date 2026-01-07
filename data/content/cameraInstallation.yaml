@@ -1,0 +1,40 @@
+id: camera-installation-and-usage
+component: components/features/component-image-text-blocks.html
+containerClass: ""
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Camera Installation and Usage
+slogan: Test the Limits, Stay Dry
+sloganClass: "justify-end"
+subject: 
+summary: 
+footer: "
+
+"
+action:
+  name: Next
+  link: #
+details:
+  - block:
+    - title: Camera & Housing
+      image: img/a6700-06.svg
+      imageClass: dark:filter-white
+      summary: "
+{{% icon number-circle-one %}}We recommend putting the camera into the housing in a room with low humidity and minimal dust. Avoid reopening the housing on a boat or near the shore.
+{{% icon number-circle-two %}}Move the locking lever on the housing tray to the “open” position. Then, slide out and remove the camera saddle from the housing.
+{{% icon number-circle-three %}}Secure the saddle to the camera by tightening the screw (using a coin) into the tripod socket of the camera.
+{{% icon number-circle-four %}}If needed, attach the appropriate zoom/focus gear to the camera lens. (For some lenses, it is necessary to detach the lens before installing the gear).
+{{% icon number-circle-five %}}Before installing the camera into the housing, align the on/off, photo/video/S&Q mode dials on the camera and the housing.
+{{% icon number-circle-six %}}Mount the camera by sliding the attached saddle along the housing's rail until it cannot go any further. Lock the camera in place by turning the locking lever to the “lock” position. Ensure that all housing controls are properly engaged.
+{{% icon number-circle-seven %}}When installing the camera with the lens and zoom/focus gear attached, press down on the zoom/focus gear until it is securely in position. Make sure the zoom/focus controls are fully engaged.
+{{% icon number-circle-eight %}}We suggest installing the camera inside the housing in a low-humidity, dust-free room. Avoid reopening the housing on a boat or near the shoreline.
+"
+  - block:
+    - title: HDMI Support
+      video0: "[!['How to connect an external underwater monitor via an HDMI cable'](https://img.youtube.com/vi/J1KwB251byA/maxresdefault.jpg)](https://youtube.com/shorts/J1KwB251byA)"
+      video: "
+{{< youtube id=J1KwB251byA class=\"yt-frame w-full h-full\" >}}
+"
+      summary: "
+{{% icon icon-empty %}}To connect an external underwater monitor via an HDMI cable, unscrew the M33 accessory port cap from the camera housing (use the M33 to M16 or M33 to M24 step-down adapter if needed), plug the cable into the accessory port, gently push the connection head into the accessory port until it cannot go any further, then tighten the screw.
+"

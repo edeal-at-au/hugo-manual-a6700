@@ -1,0 +1,39 @@
+id: troubleshooting
+component: components/features/component-call-to-action.html
+columnCount: 2
+containerClass: ""
+title: Troubleshooting
+hideHeaderTitle: false
+hideHeaderAction: true
+summary: 
+slogan: Diagnose, Solve, Succeed
+sloganClass: "justify-start"
+action:
+details:
+  - title: Buttons Do Not Work
+    summary: "Reinstall the camera."
+    icon:  icons/icon-circle.svg
+  - title: Buttons Get Stuck
+    summary: "Apply silicone grease to the button. Press the button several times to distribute the lubricant evenly."
+    icon:  icons/icon-circle.svg
+  - title: Traces of Salt on Joints During Housing Assembly
+    summary: "If salty water is present on the joints, rinse thoroughly with fresh water and clean the affected areas."
+    icon:  icons/icon-circle.svg
+  - title: Red LED Is On
+    summary: "A red LED and acoustic signal indicate excessive moisture inside the housing. If this occurs:
+{{< block \"my-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-one %}}
+Exit the water immediately.
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-two %}}
+Inspect and address potential security issues to ensure there are no leaks.
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-three %}}
+Clean and lubricate the back and port O-rings.
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-7 *:pr-2 *:leading-snug\">}} {{% icon number-circle-four %}}
+Test the housing underwater without the camera to confirm the leak has been resolved. 
+{{</ block >}}
+    "
+    icon:  icons/icon-circle.svg
+      
+weight: 1

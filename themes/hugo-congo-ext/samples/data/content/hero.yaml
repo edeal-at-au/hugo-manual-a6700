@@ -1,0 +1,58 @@
+# Hero slides
+id: hero-slides
+title: Hero Slides Sample
+slogan: Lorem ipsum dolor sit amet.
+summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. 
+
+Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus."
+showButtons: true
+action:
+  name: Lorem ipsum
+  link: "/contact/"
+#helper:
+#  name: How it works
+#  link: "#"
+showDots: true
+images:
+  main: 
+    image: img/hero-sample.png
+    title: Lorem ipsum dolor sit amet.
+    image_caption: "[Image Caption](/contact/)"
+    #class: relative z-10 animate-hero-thumb-sm-animation
+  more:
+#  - image: "img/chart-1.png"
+#    title: Chart
+#    pos: -right-1/4 top-[15%]
+#  - image: img/hero-sample-0.png
+#    title: Line Chart
+#    class: absolute z-0 animate-hero-thumb-sm-animation top-0 z-50
+slides:
+  - title: Sample 1
+    summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    icon: icons/icon-dharma-wheel.svg
+    image: img/hero-sample-1.jpg
+    action:
+      name: Get Started
+      link: "#sample-1"
+  - title: Sample 2
+    summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus.
+    icon: icons/icon-hat.svg
+    image: img/hero-sample-2.jpg
+    action:
+      name: Get Started
+      link: "#sample-2"
+  - title: Sample 3
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus."
+    icon: icons/icon-24-7-service.svg
+    image: img/hero-sample-3.jpg
+    action:
+      name: Get Started
+      link: "#sample-3"
+  - title: Sample 4
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus."
+    icon: icons/icon-pine.svg
+    image: img/hero-sample-4.jpg
+    action:
+      name: Get Started
+      link: "#sample-4"
+  

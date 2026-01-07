@@ -1,0 +1,58 @@
+{{ $data:= . }}
+<section id={{$data.id}} class="{{$data.id}}-section wrapper mb-[70px] slide">
+    <div class="container full-width py-20 bg-primary-100 dark:bg-primary-900">
+        <div class="max-w-[1320px] px-8 mx-auto text-center flex flex-col">
+            {{ partial "slogan.html" (dict "slogan" .slogan "class" "justify-end") }}
+            <h2 class="h1 my-0"> {{ .title }}</h2>
+
+            <div class="mt-[35px] mb-[48px] w-full flex flex-row items-center">
+                <div
+                    class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] min-w-[48px] xl:min-w-[64px] min-h-[48px] xl:min-h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 prev">
+                    {{ partial "utils/inline-image.html" (dict "image" "img/icons/icon-prev.svg" "name" "prev icon button" "class" "fill-neutral-50 hover:fill-primary-500" ) }}
+                </div>
+                <div class="{{$data.id}} w-full">
+                    {{ range $data.details }}
+                        <div class="flex flex-col items-center gap-[30px]">
+                            <h3 class="mb-6 text-4xl font-bold text-white">{{.title}}</h3>
+                            <div class="px-[20px] md:px-[100px] mx-auto text-center flex flex-col lg:flex-row gap-[30px] items-center mb-[20px]">
+                                <div class="w-full lg:w-[40%]">
+                                    {{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" "object-cover rounded-2xl aspect-[285/160]") }}
+                                </div>
+                                <div class="w-full lg:w-[60%]">
+                                    <p class="mb-6 text-lg text-left">{{ .summary }}</p>
+                                </div>
+                            </div>
+                            {{ with .action }}
+                            <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200"
+                                href={{.link}}>{{.name}}</a>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                </div>
+                <div
+                    class="grid place-items-center border border-neutral-50 bg-primary-500 rounded-full cursor-pointer group transition-colors duration-200 w-[48px] xl:w-[64px] min-w-[48px] xl:min-w-[64px] min-h-[48px] xl:min-h-[64px] hover:bg-neutral-50 [&>svg]:hover:fill-primary-500 next">
+                    {{ partial "utils/inline-image.html" (dict "image" "img/icons/icon-next.svg" "name" "next icon button" "class" "fill-neutral-50 hover:fill-primary-500" ) }}
+                </div>
+            </div>
+            <div class="flex flex-row dots w-full text-center"></div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        var slider = new Glider(document.querySelector('.{{$data.id}}'), {
+            //arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: '.{{$data.id}}-section .dots',
+            draggable: true,
+            duration: .5,
+            arrows: {
+                prev: '.{{$data.id}}-section .prev',
+                next: '.{{$data.id}}-section .next'
+            },
+        });
+        slideAutoPaly(slider, '.{{$data.id}}');
+    });
+
+</script>

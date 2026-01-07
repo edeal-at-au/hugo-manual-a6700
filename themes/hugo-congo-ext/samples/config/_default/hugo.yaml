@@ -1,0 +1,44 @@
+baseurl: https://hugo-congo-ext-samples.edeal.com.au
+title: Hugo Congo Ext Samples
+
+theme: 
+ - hugo-congo-ext
+ - ./hugo-congo-ext/samples/themes/hugo-congo 
+
+themesDir: "../.."
+
+galleryLoadJQuery: false
+
+languageCode: en-au
+defaultContentLanguage: en
+
+#disqusShortname: devcows
+googleAnalytics: ""
+summaryLength: 70
+paginate: 10
+
+pluralizelisttitles: false
+permalinks:
+  blog: /blog/:year/:month/:day/:filename/
+taxonomies:
+  category: categories
+  tag: tags
+  author: authors
+
+# assetDir: assets
+# module:
+#   mounts:
+#   - source: content
+#     target: content
+#   - source: static
+#     target: static
+#   - source: layouts
+#     target: layouts
+#   - source: data
+#     target: data
+#   - source: assets
+#     target: assets
+#   - source: i18n  
+#     target: i18n
+#   - source: archetypes
+#     target: archetypes

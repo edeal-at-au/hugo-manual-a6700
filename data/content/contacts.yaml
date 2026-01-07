@@ -1,0 +1,25 @@
+id: contact-us
+containerClass: 
+component: components/contacts/component-contacts.html
+title: Contacts
+hideHeaderTitle: true
+hideHeaderAction: true
+slogan: 
+summary: 
+imageClass: filer-black dark:filter-white
+
+contacts:
+  - name: Address
+    summary: "5/F, 25 Hart Avenue, Tsim Sha Tsui, Kowloon, Hong Kong"
+    icon: icons/icon-location.svg
+  # - name: Contact Number
+  #   summary: "[1800 000 000](tel:1800-000-000)"
+  #   icon: icons/icon-phone.svg
+  - name: Email Address
+    summary: "[support@saltedline.com](mailto:support@saltedline.com)"
+    icon: icons/icon-email.svg
+  - name: Website
+    summary: "[saltedline.com](https://saltedline.com)"
+    icon: icons/icon-web.svg
+
+

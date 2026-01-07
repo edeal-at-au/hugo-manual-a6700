@@ -1,0 +1,11 @@
+html {
+  font-size: 12pt;
+}
+
+footer {
+    @apply bg-primary-100 dark:bg-primary-900 !pt-0
+}
+
+h1,h2 {
+    text-transform: capitalize;
+}

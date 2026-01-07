@@ -1,0 +1,56 @@
+id: preparations
+component: components/features/component-image-text.html
+containerClass: ""
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Preparations
+slogan: Plan Your Dive, Dive Your Plan
+sloganClass: "justify-end"
+subject: 
+summary: 
+image: img/a6700-07.svg
+imageClass: dark:filter-white
+action:
+  name: Next
+  link: #
+details:
+  - title: Housing Preparations
+    summary: "
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-one %}} Inspect the main O-ring (backplate) to confirm it is in good condition, then add a thin layer of the silicone grease provided (DO NOT STRETCH IT)
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-two %}} Check the O-ring groove on the backplate for debris or foreign objects, and clean it using paper towels if necessary
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-three %}} Place the main O-ring securely onto the groove (DO NOT STRETCH IT)
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-four %}} Avoid removing the secondary (housing body) O-ring unless necessary. Wipe it clean and apply silicone grease without removing it
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-five %}} Close the housing, ensuring both metal latches are securely fastened, and the red-colored safety lock pins are correctly placed
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-six %}} Attach the port to the housing (See the *__[“Lens Port Installation”](#lens-port-installations)__* section)
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-seven %}} Conduct a waterproof test to ensure proper sealing
+{{</ block >}}
+
+"
+  - title: Camera Preparations
+    summary: "
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-one %}} Remove all straps and accessories from the camera before inserting it into the housing
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-two %}} Adjust the camera settings and parameters for underwater shooting
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-three %}} Insert a fully charged battery and a memory card with sufficient space for recording
+{{</ block >}}
+{{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
+{{% icon number-circle-four %}} Attach the lens, removing all filters and lens hoods
+{{</ block >}}
+"

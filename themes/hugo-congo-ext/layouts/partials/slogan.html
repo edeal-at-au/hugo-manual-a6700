@@ -1,0 +1,8 @@
+{{ $data := . }}
+{{ with $data.slogan }}
+<div class="slogan items-center lg:flex {{ $data.class }}">
+    <span
+        class="inline-block bg-primary-500 text-neutral-50 py-[14px] px-[28px] rounded-[50px] text-[18px] leading-[18px] mb-[29px]">
+        {{ . }}</span>
+</div>
+{{ end }}

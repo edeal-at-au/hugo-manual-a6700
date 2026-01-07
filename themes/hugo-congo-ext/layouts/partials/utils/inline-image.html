@@ -1,0 +1,18 @@
+{{ $data:= . }}
+
+{{ $match := "<svg([^>]+)>" }}
+{{ $replaceClass := printf `<svg class="%s" ${1}>` $data.class }}
+{{ $fillMatch := `fill="[^"]+"` }}
+{{ $svg := ""}}
+
+{{ with resources.Get .image }}
+    {{ if eq .MediaType.SubType "svg" }}
+        {{ $svg = replaceRE $match $replaceClass .Content }}
+        {{ if strings.Contains $data.class "fill"}}
+            {{ $svg = replaceRE $fillMatch "" $svg }}
+        {{ end }}
+        {{ $svg | safeHTML }}
+    {{ else }}
+        {{ partial "utils/image.html" $data}}
+    {{ end }}
+{{ end }}

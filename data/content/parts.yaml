@@ -1,0 +1,27 @@
+id: housing-parts
+component: components/features/component-call-to-action.html
+columnCount: 1
+containerClass: ""
+title: Parts
+#summary: "This section provides a guide to the various components of your Underwater Camera Housing. Understanding these parts and their functions is crucial for proper assembly, operation, and maintenance.
+#"
+slogan: Know Your Parts, Know Your Safety
+sloganClass: "justify-start"
+action:
+  name: Next
+  link: "#"
+hideHeaderAction: true  
+details:
+  - imageContainerClass: "-mt-16"
+    images: 
+      - image: "img/a6700-02-1.svg"
+        imageClass: " max-h-full"
+  - imageContainerClass: " justify-end lg:-mt-48 lg:-mb-32 -mt-16 -mb-16"
+    images: 
+      - image: "img/a6700-02-2.svg"
+        imageClass: " max-w-[50%] justify-end"
+  - images:  
+      - image: "img/a6700-02-3.svg"
+        imageClass: " max-h-full"
+      
+weight: 1

@@ -1,0 +1,118 @@
+{{ if and .Site.Params.enableRecaptchaInContactForm .Site.Params.googleRecaptchaKey (.Page.HasShortcode "google-captcha") }}
+<script src="//www.google.com/recaptcha/api.js" defer></script>
+{{ end }}
+{{ $vendor := newScratch }}
+{{/* Mermaid */}}
+{{ if .Page.HasShortcode "mermaid" }}
+  {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
+  {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
+  {{ $mermaidConfig := $mermaidConfig | resources.Minify }}
+  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" }}
+  {{ $vendor.Add "js" (slice $mermaidJS)  }}
+  
+{{ end }}
+{{/* Chart */}}
+{{ if .Page.HasShortcode "chart" }}
+  {{ $chartLib := resources.Get "lib/chart/chart.umd.js" }}
+  {{ $chartConfig := resources.Get "js/chart.js" }}
+  {{ $chartConfig := $chartConfig | resources.Minify }}
+  {{ $vendor.Add "js" (slice $chartLib $chartConfig) }}
+{{ end }}
+{{/* Katex */}}
+{{ if .Page.HasShortcode "katex" }}
+  {{ $katexCSS := resources.Get "lib/katex/katex.min.css" }}
+  {{ $vendor.Add "css" (slice $katexCSS) }}
+
+  {{ $katexJS := resources.Get "lib/katex/katex.min.js" }}
+  {{ $vendor.Add "js" (slice $katexJS) }}
+  
+  {{ $katexRenderJS := resources.Get "lib/katex/auto-render.min.js" }}
+  {{ $katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512" }}
+  <script defer src="{{ $katexRenderJS.RelPermalink }}" integrity="{{ $katexRenderJS.Data.Integrity }}" onload="renderMathInElement(document.body);"></script>
+  
+  {{ $katexFonts := resources.Match "lib/katex/fonts/*" }}
+  {{ range $katexFonts }}
+    {{ .Publish }}
+  {{ end }}
+{{ end }}
+{{/* Glider */}}
+{{ if .Page.HasShortcode "glide" }}
+  {{ $glideCSS := resources.Get "lib/glider-js/glider.min.css" }}
+  {{ $vendor.Add "css" (slice $glideCSS) }}
+  {{ $glideJS := resources.Get "lib/glider-js/glider.min.js" }}
+  {{ $vendor.Add "js" (slice $glideJS)  }}
+  <script>
+function slideAutoPaly(glider, selector, delay = 5000, repeat = true) {
+    let autoplay = null;
+    const slidesCount = glider.track.childElementCount;
+    let nextIndex = 1;
+    let pause = true;
+
+    function slide() {
+        autoplay = setInterval(() => {
+            if (nextIndex >= slidesCount) {
+                if (!repeat) {
+                    clearInterval(autoplay);
+                } else {
+                    nextIndex = 0;
+                }
+            }
+            glider.scrollItem(nextIndex++);
+        }, delay);
+    }
+
+    slide();
+
+    var element = document.querySelector(selector);
+    element.addEventListener('mouseover', (event) => {
+        if (pause) {
+            clearInterval(autoplay);
+            pause = false;
+        }
+    }, 300);
+
+    element.addEventListener('mouseout', (event) => {
+        if (!pause) {
+            slide();
+            pause = true;
+        }
+    }, 300);
+}
+  </script>
+{{end }}
+
+{{/* Accordion */}}
+{{ if .Page.HasShortcode "accordion" }}
+  {{ $accordionCSS := resources.Get "lib/accordion/accordion.min.css" }}
+  {{ $vendor.Add "css" (slice $accordionCSS) }}
+  {{ $accordionJS := resources.Get "lib/accordion/accordion.min.js" }}
+  {{ $vendor.Add "js" (slice $accordionJS) }}
+{{ end}}
+
+{{/* Scroll To Top */}}
+{{ if .Page.HasShortcode "scroll-to-top" }}
+  {{ $sttJS := resources.Get "lib/scroll-to-top.js" }}
+  {{ $vendor.Add "js" (slice $sttJS) }}
+{{ end}}
+
+{{/* Axios */}}
+{{ if .Page.HasShortcode "axios" }}
+  {{ $axiosJS := resources.Get "lib/axios.js" }}
+  {{ $vendor.Add "js" (slice $axiosJS) }}
+{{ end}}
+
+{{ if $vendor.Get "css" }}
+{{ $bundleCSS := $vendor.Get "css" | resources.Concat "css/vendor.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link
+  type="text/css"
+  rel="stylesheet"
+  media="screen"
+  href="{{ $bundleCSS.RelPermalink }}"
+  integrity="{{ $bundleCSS.Data.Integrity }}"
+/>
+{{ end }}
+
+{{ if $vendor.Get "js" }}
+{{ $bundleJS := $vendor.Get "js" | resources.Concat "js/vendor.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ $data:= . }}
+
+{{ partial "utils/image.html" (dict "image" .image "alt" "{{ .title }}" "class" (print "object-cover rounded-2xl aspect-[285/160] mx-auto " .imageClass)) }}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range .details }}
+    <div class="flex mb-6 gap-[15px] px-4 py-5 sm:py-9">
+        <div class="mr-5 text-nuetral-500">
+            <!-- <i class="w-5 h-5 dark:filter-white" />-->
+            {{ partial "utils/inline-image.html" (dict "image" .icon "name" .name "class" "w-5 h-5 dark:filter-white")
+            }}
+        </div>
+        <div class="text-left text-justify">
+            <h3 class="mb-2 text-2xl -mt-2 font-bold font-heading text-left">{{ .title }}</h3>
+            {{ $s := .summary }}
+            <p class="text-justify text-left">{{$s | markdownify}}</p>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ with .action }}
+<div class="px-0 py-8 lg:pb-0 items-center lg:flex justify-center">
+    <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-center text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200"
+        href={{.link}}>{{.name}}</a>
+</div>
+{{ end }}

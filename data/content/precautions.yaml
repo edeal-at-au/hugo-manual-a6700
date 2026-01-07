@@ -1,0 +1,100 @@
+id: precautions
+component: components/features/component-image-text.html
+containerClass: ""
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Precautions
+slogan: Stay Aware, Stay Safe
+sloganClass: "justify-end"
+subject: 
+summary: 
+image: img/a6700-01.svg
+imageClass: dark:filter-white
+action:
+  name: Next
+  link: #
+details:
+  - title: 
+    summary: "
+    - ***	Conduct a watertight test without the camera inside the housing *** before the first use, after servicing, or after any port or O-rings changes
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***Only use the silicone grease provided by Sea Frogs*** for the rubber O-ring! ***Do not use*** grease from other brands.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    ***Stop using the housing immediately if you detect any leakage.*** Contact *[support@seafrogs.hk](mailto:support@seafrogs.hk 'Contact Support')*.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***When traveling by air***, keep the housing open to avoid pressure buildup, which makes it difficult to open later.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***Avoid opening the housing in wet or sandy conditions.*** Keep the interior dry and tidy to prevent leaks and malfunctions.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    ***Keep the housing out of direct sunlight*** to prevent overheating and damage to the polycarbonate material.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***Store the housing in a cool, dry location***, away from high humidity or direct sunlight.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***	Moving quickly between areas with significant temperature differences *** can cause condensation inside the waterproof case.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***	Keep the housing out of direct sunlight *** to prevent overheating and damage to the polycarbonate material.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***Always dry the glass or acrylic ports and the LCD window*** using *a soft cloth* to prevent stains or salt residue from damaging the surface. Do not use solvents to clean the port, viewfinder, or LCD window.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***If the housing won't be used for a long time***, remove the O-rings and store them separately. To ensure a tight and waterproof seal, replace the O-rings at least once a year.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***	Rinse the product with fresh water *** after use in saltwater. At the end of each dive day, remove the port from the housing to prevent it from getting stuck.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***Store the housing only after thoroughly cleaning and drying its surface***.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6
+  - title: 
+    summary: "
+    - ***Do not attach an external monitor directly to the housing using the “cold shoe” mount***. The housing's “cold shoe” mount is intended for flashlights, action cameras, and other small, lightweight accessories.
+    "
+    icon:  icons/icon-exclamation.svg
+    iconClass: size-6

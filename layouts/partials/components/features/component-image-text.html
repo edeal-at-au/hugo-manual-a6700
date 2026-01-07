@@ -1,0 +1,43 @@
+{{ $ctx := .ctx }}
+{{ $data:= .data }}
+{{ $order := "" }}
+{{ $justify := "justify-end"}}
+{{ with $data }}
+{{ if eq .reverse true}}
+{{ $order = "order-last"}}
+{{ $justify = "" }}
+{{ end }}
+<div class="flex flex-wrap -mx-4 my-4">
+    <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0 {{$order}} flex items-center">
+        {{ partial "utils/image.html" (dict "image" .image "name" .title "class" (print "rounded-lg w-full object-cover " .imageClass)) }}
+    </div>
+    <div class="w-full lg:w-1/2 px-4 lg:px-12">
+        <div>
+            {{ if .hideHeaderTitle}}
+            <h2 class="mb-12 text-4xl font-bold font-heading">{{.title}}</h2>
+            {{ end }}
+            {{ range .details }}
+            <div class="flex mb-6">
+                <div class="mt-2 mr-5 text-nuetral-500">
+                    <!-- <i class="w-5 h-5" />-->
+                    {{ partial "utils/inline-image.html" (dict "image" .icon "name" .name "class" (print "dark:filter-white " .iconClass)) }}
+                </div>
+                <div>
+                    {{ with .title }}
+                    <h3 class="mb-2 text-2xl -mt-2 font-bold font-heading">{{ . }}</h3>
+                    {{ end }}
+                    {{ $s := .summary | $ctx.Page.RenderString (dict "display" "block") }}
+                    <div class="text-justify">{{$s | safeHTML}}</div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ if .hideHeaderAction }} {{ with .action }}
+        <div class="px-0 py-8 lg:pb-0 items-center lg:flex {{ $justify}}">
+            <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-center text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200" 
+        href={{.link}}>{{.name}}</a>
+        </div>
+        {{ end }} {{ end }}
+    </div>
+</div>
+{{ end }}

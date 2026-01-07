@@ -1,0 +1,29 @@
+{{ $data:= . }}
+<section id={{$data.id}} class="{{$data.id}}-section lg:mb-[210px] call-to-action-1">
+    <div class="container full-width max-w-[1320px] px-4 pb-32 mx-auto bg-primary-100 dark:bg-primary-900">
+      <div class="max-w-3xl mx-auto text-center pt-[70px] mb-12 lg:mb-20">
+        {{ partial "slogan.html" (dict "slogan" .slogan "class" "justify-end") }}
+        <h2 class="mb-4 text-4xl lg:text-5xl text-white font-bold font-heading">{{.title}}</h2>
+        <p class="mb-6 text-lg text-gray-50">{{.summary}}</p>
+        {{ with .action }}
+        <a class="inline-block max-w-[250px] sm:w-auto px-6 py-4 text-sm text-neutral-50 font-bold leading-loose bg-primary-600 hover:bg-primary-700 rounded transition duration-200" 
+        href={{.link}}>{{.name}}</a>
+        {{ end }}
+      </div>
+      <div class="-mb-8 lg:-mb-64 max-w-[1320px] mx-auto px-8">
+        <div class="flex flex-wrap -mb-8 justify-stretch justify-items-stretch">
+            {{ range .details }}
+          <div class="w-full lg:w-1/3 px-4 mb-8">
+            <div class="text-neutral-50 bg-primary-600 text-center p-6 h-full rounded dark:bg-primary-200 dark:text-neutral-900">
+              <span>
+                {{ partial "utils/inline-image.html" (dict "image" .icon "class" "w-12 h-12 mx-auto mb-3 filter-white dark:filter-none")}}
+              </span>
+              <h3 class="mb-3 text-2xl font-bold font-heading">{{.title}}</h3>
+              <p class="text-lg text-justify">{{.summary | markdownify}}</p>
+            </div>
+        </div>
+        {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
