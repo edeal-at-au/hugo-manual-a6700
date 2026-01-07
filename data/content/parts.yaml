@@ -16,12 +16,8 @@ details:
     images: 
       - image: "img/a6700-02-1.svg"
         imageClass: " max-h-full"
-  - imageContainerClass: " justify-end lg:-mt-48 lg:-mb-32 -mt-16 -mb-16"
-    images: 
-      - image: "img/a6700-02-2.svg"
-        imageClass: " max-w-[50%] justify-end"
   - images:  
-      - image: "img/a6700-02-3.svg"
+      - image: "img/a6700-02-2.svg"
         imageClass: " max-h-full"
       
 weight: 1
