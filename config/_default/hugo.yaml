@@ -22,11 +22,12 @@ defaultContentLanguage: en
 #disqusShortname: devcows
 googleAnalytics: ""
 summaryLength: 70
-paginate: 10
+pagination:
+  pagerSize: 10
 
 pluralizelisttitles: false
 permalinks:
-  blog: /blog/:year/:month/:day/:filename/
+  blog: /blog/:year/:month/:day/:slug/
 taxonomies:
   category: categories
   tag: tags

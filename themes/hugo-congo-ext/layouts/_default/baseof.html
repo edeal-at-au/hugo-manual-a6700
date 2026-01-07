@@ -1,5 +1,5 @@
-{{- partial "partials/functions/warnings.html" .Site -}}
-{{- partial "partials/functions/init.html" . -}}
+{{- partial "functions/warnings.html" .Site -}}
+{{- partial "functions/init.html" . -}}
 <!DOCTYPE html>
 <html
   lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
@@ -28,11 +28,11 @@
       >
     </div>
     <div class="hidden">{{ partial "utils/inline-image.html" (dict "image" "icons/svg-filters.svg") }}</div>
-    {{ $header := print "partials/header/" .Site.Params.header.layout ".html" }}
-    {{ if templates.Exists $header }}
+    {{ $header := print "header/" .Site.Params.header.layout ".html" }}
+    {{ if templates.Exists (print "partials/" $header) }}
       {{ partial $header . }}
     {{ else }}
-      {{ partial "partials/header/basic.html" . }}
+      {{ partial "header/basic.html" . }}
     {{ end }}
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
