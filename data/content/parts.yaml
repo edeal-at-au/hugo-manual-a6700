@@ -20,13 +20,11 @@ details:
     images:  
       - image: "img/a6700-02-2.svg"
         imageClass: " max-w-full"
-  - imageContainerClass: "-mt-16"
+  - imageContainerClass: "-mt-16 flex-row gap-4"
     images:  
       - image: "img/a6700-02-3.svg"
-        imageClass: " max-w-[45%] justify-start"
-  - imageContainerClass: "-mt-16"
-    images:  
+        imageClass: " max-w-[45%]"
       - image: "img/a6700-02-4.svg"
-        imageClass: " max-w-[45%] justify-end"
+        imageClass: " max-w-[45%]"
       
 weight: 1
