@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        font-family: OpenSans-Regular, 'OpenSans Regular';
+        font-family: Mulish, sans-serif;
         font-size: 7px;
       }
 
@@ -46,7 +46,7 @@
       }
 
       .cls-2 {
-        font-family: OpenSans-Light, 'Open Sans';
+        font-family: Mulish, sans-serif;
         font-size: 6px;
         font-weight: 300;
       }

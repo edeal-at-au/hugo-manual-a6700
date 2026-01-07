@@ -37,7 +37,7 @@
 
       .cls-9 {
         fill: #010101;
-        font-family: OpenSans-Light, 'Open Sans';
+        font-family: Mulish, sans-serif;
         font-size: 6px;
         font-weight: 300;
       }

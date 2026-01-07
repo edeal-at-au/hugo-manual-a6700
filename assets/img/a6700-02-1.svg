@@ -15,7 +15,7 @@
       }
 
       .cls-4 {
-        font-family: AlibabaPuHuiTiL, AlibabaPuHuiTiL;
+        font-family: Mulish, sans-serif;
         font-size: 7px;
       }
 
@@ -56,7 +56,7 @@
       }
 
       .cls-5 {
-        font-family: OpenSans-Light, 'Open Sans';
+        font-family: Mulish, sans-serif;
         font-size: 6px;
         font-weight: 300;
       }

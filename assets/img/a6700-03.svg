@@ -4,7 +4,7 @@
   <defs>
     <style>
       .st0 {
-        font-family: ArialMT, Arial;
+        font-family: Mulish, sans-serif;
         font-size: 5.4px;
       }
 
@@ -29,7 +29,7 @@
       }
 
       .st1, .st5 {
-        font-family: Arial-BoldMT, Arial;
+        font-family: Mulish, sans-serif;
         font-size: 3.41px;
         font-weight: 700;
       }
@@ -50,7 +50,7 @@
       }
 
       .st2 {
-        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-family: Mulish, sans-serif;
         font-size: 8px;
       }
 
@@ -76,7 +76,7 @@
       }
 
       .st3, .st6 {
-        font-family: OpenSans-Semibold, 'Open Sans';
+        font-family: Mulish, sans-serif;
         font-weight: 600;
       }
 

@@ -46,7 +46,7 @@
       }
 
       .st10 {
-        font-family: OpenSans-Regular, 'OpenSans Regular';
+        font-family: Mulish, sans-serif;
         font-size: 6px;
       }
 

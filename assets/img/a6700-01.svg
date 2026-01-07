@@ -17,7 +17,7 @@
       }
 
       .st1 {
-        font-family: EurostileLT-Bold, 'EurostileLT Bold';
+        font-family: Mulish, sans-serif;
         font-size: 5.53px;
         font-weight: 700;
         stroke-width: .11px;

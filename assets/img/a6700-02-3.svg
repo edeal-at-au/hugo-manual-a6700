@@ -28,7 +28,7 @@
       }
 
       .cls-7 {
-        font-family: OpenSans-Light, 'Open Sans';
+        font-family: Mulish, sans-serif;
         font-size: 6px;
         font-weight: 300;
       }
@@ -50,7 +50,7 @@
       }
 
       .cls-8 {
-        font-family: OpenSans-Regular, 'AGMOA N+ Open Sans';
+        font-family: Mulish, sans-serif;
         font-size: 7px;
       }
 
