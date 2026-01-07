@@ -58,13 +58,13 @@ details:
     iconClass: size-6
   - title: 
     summary: "
-    - ***Moving quickly between areas with significant temperature differences *** can cause condensation inside the waterproof case.
+    - ***Moving quickly between areas with significant temperature differences*** can cause condensation inside the waterproof case.
     "
     icon:  icons/icon-exclamation.svg
     iconClass: size-6
   - title: 
     summary: "
-    - ***Keep the housing out of direct sunlight *** to prevent overheating and damage to the polycarbonate material.
+    - ***Keep the housing out of direct sunlight*** to prevent overheating and damage to the polycarbonate material.
     "
     icon:  icons/icon-exclamation.svg
     iconClass: size-6
@@ -82,7 +82,7 @@ details:
     iconClass: size-6
   - title: 
     summary: "
-    - ***Rinse the product with fresh water *** after use in saltwater. At the end of each dive day, remove the port from the housing to prevent it from getting stuck.
+    - ***Rinse the product with fresh water*** after use in saltwater. At the end of each dive day, remove the port from the housing to prevent it from getting stuck.
     "
     icon:  icons/icon-exclamation.svg
     iconClass: size-6
