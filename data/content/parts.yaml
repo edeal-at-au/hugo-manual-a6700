@@ -16,9 +16,11 @@ details:
   - imageContainerClass: "flex flex-row gap-4 items-start"
     images: 
       - image: "img/a6700-02-1.svg"
-        imageClass: "w-1/2"
+        imageClass: "w-full"
+  - imageContainerClass: "flex flex-row gap-4 items-start"
+    images: 
       - image: "img/a6700-02-2.svg"
-        imageClass: "w-1/2"
+        imageClass: "w-full"
   - imageContainerClass: "flex flex-row gap-4 items-start"
     images:  
       - image: "img/a6700-02-3.svg"
