@@ -15,7 +15,6 @@ details:
   - imageContainerClass: "-mt-16"
     images: 
       - image: "img/a6700-02-1.svg"
-        imageClass: " max-h-full"
   - images:  
       - image: "img/a6700-02-2.svg"
         imageClass: " max-h-full"
