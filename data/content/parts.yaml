@@ -2,7 +2,7 @@ id: housing-parts
 component: components/features/component-call-to-action.html
 columnCount: 1
 containerClass: ""
-gapY: "gap-y-2"
+gapY: "gap-y-8"
 title: Parts
 #summary: "This section provides a guide to the various components of your Underwater Camera Housing. Understanding these parts and their functions is crucial for proper assembly, operation, and maintenance.
 #"
