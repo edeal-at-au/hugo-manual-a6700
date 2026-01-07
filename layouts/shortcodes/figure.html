@@ -1,0 +1,65 @@
+{{ if .Get "default" }}
+  {{- $src := .Get "src" -}}
+  {{- $alt := .Get "alt" -}}
+  {{- $title := .Get "title" -}}
+  {{- $caption := .Get "caption" -}}
+  {{- $class := .Get "class" -}}
+  {{- $height := .Get "height" -}}
+  {{- $width := .Get "width" -}}
+  {{- $link := .Get "link" -}}
+  {{- $target := .Get "target" -}}
+  {{- $rel := .Get "rel" -}}
+  {{- $attr := .Get "attr" -}}
+  {{- $attrlink := .Get "attrlink" -}}
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    {{- with $link }}<a href="{{ . }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{ end -}}
+    <img src="{{ $src }}"
+      {{- with $alt }} alt="{{ . }}"{{ end -}}
+      {{- with $width }} width="{{ . }}"{{ end -}}
+      {{- with $height }} height="{{ . }}"{{ end -}}
+    >
+    {{- with $link }}</a>{{ end -}}
+    {{- if or $title $caption $attr -}}
+      <figcaption>
+        {{- with $title }}<h4>{{ . }}</h4>{{ end -}}
+        {{- if or $caption $attr -}}
+          <p>
+            {{- $caption | markdownify -}}
+            {{- with $attrlink }}<a href="{{ . }}">{{ end -}}
+            {{- $attr | markdownify -}}
+            {{- with $attrlink }}</a>{{ end -}}
+          </p>
+        {{- end -}}
+      </figcaption>
+    {{- end -}}
+  </figure>
+{{ else }}
+  {{ $url := urls.Parse (.Get "src") }}
+  {{ $altText := .Get "alt" }}
+  {{ $caption := .Get "caption" }}
+  {{ $href := .Get "href" }}
+  {{ $class := .Get "class" }}
+
+  {{ $file := $url.Path }}
+  {{ $img := .Page.Resources.GetMatch $file }}
+  {{- if and (not $img) .Page.File }}
+    {{ $path := path.Join .Page.File.Dir $file }}
+    {{ $img = resources.Get $path }}
+  {{ end -}}
+
+  <!-- prettier-ignore -->
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    {{ with $href }}<a href="{{ . }}">{{ end }}
+
+    {{- with $img -}}
+      {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+      {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+      {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "lazy" $lazy "webp" $webp) }}
+    {{- else -}}
+      <img src="{{ $url.String }}" alt="{{ $altText }}" class="{{ $class }}"/>
+    {{- end -}}
+
+    {{ with $href }}</a>{{ end }}
+    {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{ end }}
