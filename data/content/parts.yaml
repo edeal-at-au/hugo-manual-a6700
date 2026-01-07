@@ -12,19 +12,17 @@ action:
   link: "#"
 hideHeaderAction: true  
 details:
-  - imageContainerClass: "-mt-16"
+  - imageContainerClass: "flex flex-row gap-4 items-start"
     images: 
       - image: "img/a6700-02-1.svg"
-        imageClass: " max-w-full"
-  - imageContainerClass: "-mt-16"
-    images:  
+        imageClass: "w-1/2"
       - image: "img/a6700-02-2.svg"
-        imageClass: " max-w-full"
-  - imageContainerClass: "-mt-16 flex-row gap-4"
+        imageClass: "w-1/2"
+  - imageContainerClass: "flex flex-row gap-4 items-start"
     images:  
       - image: "img/a6700-02-3.svg"
-        imageClass: " max-w-[45%]"
+        imageClass: "w-1/2"
       - image: "img/a6700-02-4.svg"
-        imageClass: " max-w-[45%]"
+        imageClass: "w-1/2"
       
 weight: 1
