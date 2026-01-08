@@ -10,7 +10,7 @@
         <div class="relative pl-8">
           <dt class="text-base/7 font-semibold text-gray-900">
             <div class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-600">
-              {{ partial "utils/inline-image.html" (dict "image" .icon "class" "w-4 h-4 mx-auto filter-none")}}
+              {{ partial "utils/inline-image.html" (dict "image" .icon "class" "w-4 h-4 mx-auto filter-none dark:filter-white")}}
             </div>
             {{ $t:= .title | $ctx.Page.RenderString (dict "display" "block") }}
             {{ $t | safeHTML}}
@@ -25,7 +25,7 @@
               {{ if isset . "image" }} {{ $image = .image }} {{ $imageClass = .imageClass }} 
               {{ else }} {{ $image = . }} {{ end }}
               {{ with $image }}
-                {{ partial "utils/image.html" (dict "image" . "class" (print "filter-none " $imageClass))}}
+                {{ partial "utils/image.html" (dict "image" . "class" (print "filter-none dark:filter-white preserve-colors " $imageClass))}}
               {{ end}}
             {{ end }}
           </div>

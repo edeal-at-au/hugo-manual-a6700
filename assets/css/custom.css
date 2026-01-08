@@ -88,17 +88,45 @@ hr {
   height: 100%;
 }
 
-/* Preserve specific SVG colors in dark mode - keep yellow, blue, and red unchanged */
-.dark img[src*=".svg"] {
+/* SVG color handling for dark mode */
+/* Override the dark:filter-white for images with preserve-colors class */
+.dark img.preserve-colors[src*=".svg"] {
   filter: none !important;
 }
 
-/* Alternatively, if SVGs are inline, preserve specific color classes */
+/* Apply dark mode styles directly to SVG elements */
+.dark svg .st0[stroke="#070404"],
+.dark svg .st0[style*="stroke: #070404"],
+.dark svg [stroke="#070404"],
+.dark svg [stroke="#010101"],
+.dark svg [stroke="#3e3b3a"],
+.dark svg [fill="#010101"],
+.dark svg [fill="#3e3b3a"],
+.dark svg [fill="#070404"] {
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Keep these colors unchanged in dark mode */
 .dark svg [fill="#fcee1f"],
 .dark svg [fill="#2d9dd8"],
 .dark svg [fill="#d02027"],
 .dark svg [stroke="#fcee1f"],
 .dark svg [stroke="#2d9dd8"],
 .dark svg [stroke="#d02027"] {
-  opacity: 1 !important;
+  /* These stay as-is */
+}
+
+/* For SVG style classes */
+.dark svg .st0 {
+  stroke: #ffffff !important;
+}
+
+.dark svg .st3 {
+  fill: #2d9dd8 !important;
+}
+
+.dark svg .st1,
+.dark svg .st2 {
+  stroke: #2d9dd8 !important;
 }
