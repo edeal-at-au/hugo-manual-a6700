@@ -87,3 +87,18 @@ hr {
   width: 100%;
   height: 100%;
 }
+
+/* Preserve specific SVG colors in dark mode - keep yellow, blue, and red unchanged */
+.dark img[src*=".svg"] {
+  filter: none !important;
+}
+
+/* Alternatively, if SVGs are inline, preserve specific color classes */
+.dark svg [fill="#fcee1f"],
+.dark svg [fill="#2d9dd8"],
+.dark svg [fill="#d02027"],
+.dark svg [stroke="#fcee1f"],
+.dark svg [stroke="#2d9dd8"],
+.dark svg [stroke="#d02027"] {
+  opacity: 1 !important;
+}
