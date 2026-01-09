@@ -30,6 +30,17 @@ details:
 {{% icon number-circle-eight %}}We suggest installing the camera inside the housing in a low-humidity, dust-free room. Avoid reopening the housing on a boat or near the shoreline.
 "
   - block:
+    - title: Removing a Camera from the Housing
+      summary: "
+{{% icon number-circle-one %}}Unlock the camera by turning the locking lever to the “unlock” position, then slide the camera out.
+"
+
+  - block:
+    - title: Universal M33 accessories port
+      summary: "
+{{% icon icon-empty %}}The Universal M33 accessories port is meant for connecting accessories like HDMI cables and Sync Cord Bulkhead etc. Additionally, you can attach M16 or M24 accessories using optional step-down adapters that convert M33 to M16 or M24 (sold separately).
+"
+  - block:
     - title: HDMI Support
       video0: "[!['How to connect an external underwater monitor via an HDMI cable'](https://img.youtube.com/vi/J1KwB251byA/maxresdefault.jpg)](https://youtube.com/shorts/J1KwB251byA)"
       video: "

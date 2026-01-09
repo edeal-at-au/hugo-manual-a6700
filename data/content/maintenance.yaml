@@ -18,19 +18,31 @@ details:
     {{% icon icon-empty %}} **Precautions**
     {{% icon icon-warning %}} *Before each dive*, carefully inspect the waterproof housing's main (backplate) and port O-rings. If the O-ring has any debris, remove it and clean it with fresh water, then dry it using a lint-free soft cloth. 
     {{% icon icon-warning %}} *After cleaning*, each O-ring should be lubricated with waterproof silicone grease. When applying grease to the O-rings, use only a tiny amount. A thin, even layer is sufficient to make the O-rings shine without visible grease patches. Over-lubricating can attract debris and potentially cause leakage.
-    {{% icon icon-warning %}} If the housing will not be used for an extended period, remove the O-rings, lubricate them, and store them separately.
-    {{% icon icon-warning %}} All housing O-rings must be replaced at least once a year or after 50 uses, whichever comes first. 
-
-    {{% icon icon-exclamation %}} **Note:** Do not forcibly remove or use sharp, hard metal objects to remove the O-rings, as this may damage them or the case groove, leading to water leakage. **DO NOT STRETCH THE O-RINGS!**
-    {{% icon icon-exclamation %}} The O-rings for the the ***M33 accessory port***, ***VPS100 opening*** and ***shutter grip plug*** are maintained like the main O-rings. 
     "
     - title: 
       summary: "
     {{% icon icon-empty %}} &nbsp;
-    {{% icon icon-warning %}} 
-        {{< block \"*:max-w-[50%]\ *:mx-auto *:mt-2\">}} 
-    ***For Dome ports O-rings Maintenance*** (Not applicable to flat ports) please watch the following video:
-    [!['Learn how to properly service the O-rings on the dome port'](http://img.youtube.com/vi/q7s3V0cmWW8/0.jpg)](https://youtu.be/q7s3V0cmWW8?si=iHnuy2XKUrutQc8g)
+    {{% icon icon-warning %}} If the housing will not be used for an extended period, remove the O-rings, lubricate them, and store them separately.
+
+    {{% icon icon-exclamation %}} **Note:** Do not forcibly remove or use sharp, hard metal objects to remove the O-rings, as this may damage them or the case groove, leading to water leakage. **DO NOT STRETCH THE O-RINGS!**
+    {{% icon icon-exclamation %}} The O-rings for the the ***M33 accessory port***, ***VPS100 opening*** and ***shutter grip plug*** are maintained like the main O-rings. 
+    "
+  - block:
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} 
+        {{< block \"*:max-w-full\ *:mx-auto *:mt-2\">}} 
+    ***O-rings Maintenance For Dome ports*** (Not applicable to flat ports) please watch the following video:
+    {{< youtube id=q7s3V0cmWW8 class=\"yt-frame w-full h-full\" title=\"Learn how to properly service the O-rings on the dome port\" >}}
+        {{</ block >}}
+    {{% icon icon-empty %}} &nbsp;
+    "     
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} 
+        {{< block \"*:max-w-full\ *:mx-auto *:mt-2\">}} 
+    ***O-rings Maintenance For Flat ports*** (Not applicable to dome ports) please watch the following video:
+    {{< youtube id=pYvCtuEKSdk class=\"yt-frame w-full h-full\" title=\"Learn how to properly service the O-rings on the flat port\" >}}
         {{</ block >}}
     "
   - block:
@@ -41,17 +53,21 @@ details:
         {{< block \"*:max-w-[50%] *:mx-auto *:mt-2\">}} 
     Use the provided O-Ring removal tool to take out the O-Ring. !['O-Ring Removal Tool'](img/a6700-14.svg) !['O-Ring Removal Tool'](img/a6700-12.svg)
         {{</ block >}}
-    {{% icon number-circle-three %}} After cleaning, reapply the silicone grease to the O-ring. Use your fingers to distribute the grease evenly.
-    {{% icon number-circle-four %}} Check the groove of the backplate or port for debris. If debris is present, clean it using a lint-free soft cloth. Reinstall the lubricated O-ring back into the groove.
-    {{% icon number-circle-five %}} ***Do not stretch the O-rings***.
-    "
-    - title: 
-      summary: "
-    {{% icon icon-empty %}} &nbsp;
     {{% icon number-circle-two %}} 
         {{< block \"*:max-w-[50%] *:mx-auto *:mt-2\">}} 
     Inspect the O-ring, remove old grease and debris, and clean it with fresh water. If the O-ring is damaged, replace it with a new one. !['O-Ring Removal Tool'](img/a6700-13.svg)
         {{</ block >}}
+    "
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} &nbsp;
+    {{% icon number-circle-three %}} After cleaning, reapply the silicone grease to the O-ring. Use your fingers to distribute the grease evenly.
+    {{% icon number-circle-four %}} Check the groove of the backplate or port for debris. If debris is present, clean it using a lint-free soft cloth. Reinstall the lubricated O-ring back into the groove.
+    {{% icon icon-empty %}} 
+        {{< block \"*:max-w-full\ *:mx-auto *:mt-2\">}} 
+    {{< youtube id=byi58MUQ93Q class=\"yt-frame w-full h-full\" title=\"Check the groove of the backplate or port for debris\" >}}
+        {{</ block >}}
+    {{% icon number-circle-five %}} ***Do not stretch the O-rings***.
     "
   - block:
     - title: 
@@ -63,6 +79,17 @@ details:
       summary: "
     {{% icon icon-empty %}} &nbsp;
     {{% icon number-circle-two %}} To install the secondary (housing body) O-ring, first ensure the groove on the housing body is completely dry. Carefully remove all grease from the O-ring without stretching it, then install it into the groove. Please note: even small traces of grease on the O-ring or in the groove can prevent proper installation.
+   "
+  - block:
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **Routine O-rings Replacement:**
+    {{% icon icon-empty %}} Unless absolutely required, keep the secondary (housing body) O- ring in place. Instead, simply wipe it clean and apply silicone grease without removing it.
+    "
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **Condition-Based O-rings Replacement:**
+    {{% icon icon-empty %}} If an O-ring shows any signs of damage, such as nicks, cuts, cracks, permanent flattening (compression set), or loss of elasticity, it must be replaced immediately. 
    "
   - block:
     - title: 

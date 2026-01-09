@@ -27,7 +27,7 @@
                     {{ with .icon }}
                     <div class="mr-5 text-nuetral-500">
                         <!-- <i class="w-5 h-5 dark:filter-white" />-->
-                        {{ partial "utils/inline-image.html" (dict "image" . "name" .name "class" "w-5 h-5 dark:filter-white") }}
+                        {{ partial "utils/inline-image.html" (dict "image" . "name" $block.title "class" "w-5 h-5 dark:filter-white") }}
                     </div>
                     {{ end }}
                     <div class="text-left text-justify">

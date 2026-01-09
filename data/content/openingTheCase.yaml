@@ -1,76 +1,40 @@
 id: opening-the-case
-component: components/features/component-image-text.html
+component: components/features/component-image-text-blocks.html
 containerClass: ""
 hideHeaderTitle: false
 hideHeaderAction: true
-title: Opening the Waterproof Housing
+title: Opening & Closing the Waterproof Housing
 slogan: Open Carefully, Stay Watertight
 sloganClass: "justify-end"
 subject: 
 summary: 
 image: img/a6700-11.svg
-imageClass: dark:filter-white
+imageClass: 
 action:
   name: Next
   link: #
 details:
-  - title: 
-    summary: "
-Push the red button of the safety lock to the neutral position and hold it there.
+  - block:
+    - title: Opening
+      image: img/a6700-06.svg
+      imageClass: dark:filter-white
+      summary: "
+{{% icon number-circle-one %}}Push the red button of the safety lock to the neutral position and hold it there.
+{{% icon number-circle-two %}}Simultaneously pull part A outward and backward.
+{{% icon number-circle-three %}}Once part A reaches a certain position, pull part B outward, ensuring that the round shaft of B safely disengages from the metal hook on the back cover, completing the unlocking of a single safety lock.
+{{% icon number-circle-four %}}After both the left and right safety locks are unlocked, remove the back cover.
     "
-    icon:  icons/number-circle-one.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-Simultaneously pull part A outward and backward.
-    "
-    icon:  icons/number-circle-two.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-Once part A reaches a certain position, pull part B outward, ensuring that the round shaft of B safely disengages from the metal hook on the back cover, completing the unlocking of a single safety lock.
-    "
-    icon:  icons/number-circle-three.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-After both the left and right safety locks are unlocked, remove the back cover.
-    "
-    icon:  icons/number-circle-four.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-Align the back plate with the main housing body and gently press it into position. 
 
-Visually inspect the housing to ensure the O-ring isn't pinched and that a consistent seal exists all around.
-    "
-    icon:  icons/number-circle-five.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-Push part *B* inward until the round shaft securely engages with the metal hook on the housing body.
-    "
-    icon:  icons/number-circle-six.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-Push part *A* forward and inward to lock the mechanism into place.
-
-The red safety button should automatically return from the neutral position to the locked position to secure the safety lock.
-    "
-    icon:  icons/number-circle-seven.svg
-    iconClass: w-10 h-10 -mt-2
-  - title: 
-    summary: "
-Repeat the same steps for both the left and right safety locks.
-
-The red safety button should automatically return from the neutral position to the locked position to secure the safety lock.
-
-Pull up both locks to make sure they're fully engaged and securely fastened before use.
-
-Visually inspect the closed housing to ensure the O-ring isn't pinched.
-    "
-    icon:  icons/number-circle-eight.svg
-    iconClass: w-10 h-10 -mt-2
+  - block:
+    - title: Closing
+      summary: "
+{{% icon number-circle-one %}}Align the back plate with the main housing body and gently press it into position. 
+{{% icon number-circle-two %}}Visually inspect the housing to ensure the O-ring isn't pinched and that a consistent seal exists all around.
+{{% icon number-circle-three %}}Push part *B* inward until the round shaft securely engages with the metal hook on the housing body.
+{{% icon number-circle-four %}}Push part *A* forward and inward to lock the mechanism into place. The red safety button should automatically return from the neutral position to the locked position to secure the safety lock.
+{{% icon number-circle-five %}}Repeat the same steps for both the left and right safety locks. The red safety button should automatically return from the neutral position to the locked position to secure the safety lock. 
+{{% icon icon-empty %}}Pull up both locks to make sure they're fully engaged and securely fastened before use. 
+{{% icon icon-empty %}}Visually inspect the closed housing to ensure the O-ring isn't pinched.
+      "
 
 

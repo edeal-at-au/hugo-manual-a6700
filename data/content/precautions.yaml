@@ -46,12 +46,6 @@ details:
     iconClass: size-6
   - title: 
     summary: "
-    ***Keep the housing out of direct sunlight*** to prevent overheating and damage to the polycarbonate material.
-    "
-    icon:  icons/icon-exclamation.svg
-    iconClass: size-6
-  - title: 
-    summary: "
     - ***Store the housing in a cool, dry location***, away from high humidity or direct sunlight.
     "
     icon:  icons/icon-exclamation.svg

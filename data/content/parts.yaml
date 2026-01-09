@@ -17,6 +17,10 @@ details:
     images: 
       - image: "img/a6700-02-1.svg"
         imageClass: "w-full"
+  - imageContainerClass: " justify-end -mt-16"
+    images: 
+      - image: "img/a6700-02-1-2.svg"
+        imageClass: " max-w-[50%] justify-end"
   - imageContainerClass: "flex flex-row gap-4 items-start"
     images: 
       - image: "img/a6700-02-2.svg"
