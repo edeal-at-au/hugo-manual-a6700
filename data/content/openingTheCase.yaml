@@ -16,7 +16,7 @@ action:
 details:
   - block:
     - title: Opening
-      image: img/a6700-06.svg
+      image: img/a6700-11.svg
       imageClass: dark:filter-white
       summary: "
 {{% icon number-circle-one %}}Push the red button of the safety lock to the neutral position and hold it there.
