@@ -23,7 +23,8 @@ details:
       summary: "
     {{% icon icon-empty %}} &nbsp;
     {{% icon icon-warning %}} *Recheck the O-Ring and groove after installation* to ensure no debris is attached.
-    {{% icon icon-warning %}} Replace O-Rings at least once a year or after 50 uses to maintain the product's waterproof performance. 
+    {{% icon icon-warning %}} The waterproof housing's main (backplate), secondary (housing body), and port O-rings must be replaced at least once a year or after 50 maintenance/cleaning cycles, whichever comes first.
+    {{% icon icon-warning %}} If an O-ring shows any signs of damage, such as nicks, cuts, cracks, permanent flattening (compression set), or loss of elasticity, it must be replaced immediately. 
 "
   - block:
     - title: 
