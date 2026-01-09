@@ -83,13 +83,13 @@ details:
 -   &nbsp;    
 
 {{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
-{{% icon check-circle %}} The reinforced metallic bottom plate 
+{{% icon check-circle %}} Reinforced metallic bottom plate (for shutter grip)
 {{</ block >}}
 {{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
 {{% icon check-circle %}} Dual-sided metal latch locking system 
 {{</ block >}}
 {{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
-{{% icon check-circle %}} Detachable Pistol grip with 2-stage trigger (optional) 
+{{% icon check-circle %}} Detachable shutter grip with 2-stage trigger (optional) 
 {{</ block >}}
 {{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
 {{% icon check-circle %}} O-rings sealed buttons with spring 
