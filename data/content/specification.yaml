@@ -67,7 +67,7 @@ details:
 {{% icon check-circle %}} Interchangeable port system 
 {{</ block >}}
 {{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
-{{% icon check-circle %}} Universal M33 accessories port
+{{% icon check-circle %}} Universal M33 bulkhead interface
 {{</ block >}}
 {{< block \"my-2 flex [&_svg]:size-6 *:pr-2 *:leading-snug\">}}
 {{% icon check-circle %}} Dual Fiber-Optic port (Sea &amp; Sea type) 

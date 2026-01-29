@@ -36,9 +36,9 @@ details:
 "
 
   - block:
-    - title: Universal M33 accessories port
+    - title: Universal M33 bulkhead interface
       summary: "
-{{% icon icon-empty %}}The Universal M33 accessories port is meant for connecting accessories like HDMI cables and Sync Cord Bulkhead etc. Additionally, you can attach M16 or M24 accessories using optional step-down adapters that convert M33 to M16 or M24 (sold separately).
+{{% icon icon-empty %}}The Universal M33 bulkhead is meant for connecting  HDMI cables etc. Additionally, you can attach many other M16 or M24 accessories using optional step-down adapters that convert M33 to M16 or M24 ports (sold separately).
 "
   - block:
     - title: HDMI Support
