@@ -13,7 +13,7 @@
                     <!-- <i class="w-5 h-5 dark:filter-white" />-->
                     {{ partial "utils/inline-image.html" (dict "image" .icon "name" .name "class" "w-5 h-5 dark:filter-white") }}
                 </div>
-                
+                <div class="text-left text-justify">
                     <h3 class="mb-2 text-2xl -mt-2 font-bold font-heading text-left">{{ .title }}</h3>
                     {{ $s := .summary }}
                     <p class="text-justify text-left">{{$s | markdownify}}</p>
