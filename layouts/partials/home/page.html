@@ -119,6 +119,18 @@
             "containerClass" $containerCss)))
         }}
 {{ end }}
+<!-- Leak Detection Sensor Section -->
+{{ with .leakDetectionSensor}}
+    {{ $count = add $count 1 }}
+    {{ $isEven = eq (mod $count 2) 0 }}
+    {{ $containerCss := print .containerClass " mt-0" }}
+    {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
+    {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
+        (merge . (dict 
+        "action" (dict "name" "Next" "link" "#storing-the-housing")
+        "containerClass" $containerCss)))
+        }}
+{{ end }}
 <!-- How It Works Section -->
 {{ with .maintenance}}
     {{ $count = add $count 1 }}
@@ -139,7 +151,7 @@
     {{ if $isEven }} {{ $containerCss = print $containerCss $altCss }} {{ end }}
     {{ partial "components/section.html"  (dict "ctx" $ctx "data" 
         (merge . (dict 
-        "action" (dict "name" "Next" "link" "#storing-the-housing")
+        "action" (dict "name" "Next" "link" "#leak-detection-sensor")
         "containerClass" $containerCss)))
         }}
 {{ end }}

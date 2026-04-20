@@ -1,0 +1,41 @@
+id: leak-detection-sensor
+component: components/features/component-how-it-works.html
+columnCount: 2
+hideHeaderTitle: false
+hideHeaderAction: true
+title: Leak Detection Sensor
+slogan: Early Warning, Total Protection
+summary: 
+image: 
+imageClass: dark:filter-white
+action:
+  name: Next
+  link: "#"
+details:
+  - block:
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **Leak Detection Sensor**
+    {{% icon icon-empty %}} The Salted Line SeaFrogs housing features a factory-installed leak detection sensor that continuously monitors for moisture inside the housing. If water contacts the sensor's exposed strip, it immediately triggers an audible and/or visual alarm for early warning.
+    {{% icon icon-exclamation %}} **Note:** The highly sensitive sensor may occasionally false-trigger due to internal humidity or temperature differences.
+"
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **How to Reset After Triggering**
+    {{% icon number-circle-one %}} For false alarms: Wipe the contact strip dry with a paper towel.
+    {{% icon number-circle-two %}} If water entered: Wipe the strip dry, blow the unit gently with compressed air, and replace the battery if needed.
+    {{% icon number-circle-three %}} If the alarm persists, replace the sensor.
+"
+  - block:
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} **Sensor Replacement**
+    {{% icon icon-empty %}} The sensor is an inexpensive consumable part (like O-rings) and is not covered by the housing warranty. Replacements come with a fresh battery and are easy to install with double-sided tape. Replace annually or as needed.
+"
+    - title: 
+      summary: "
+    {{% icon icon-empty %}} 
+        {{< block \"*:max-w-full\\ *:mx-auto *:mt-2\">}} 
+    {{< youtube id=uSjFy17H0nc class=\"yt-frame w-full h-full\" title=\"Leak Detection Sensor\" >}}
+        {{< / block >}}
+"
