@@ -24,7 +24,7 @@
             {{ $video := . | $ctx.Page.RenderString  }}
             {{$video | safeHTML}}
         {{ end }}
-        <div class="text-left text-justify">
+        
             {{ with .title }}
             <h3 class="mb-4 -mt-2 text-2xl font-bold font-heading text-left">{{ . }}</h3>
             {{ end }}
